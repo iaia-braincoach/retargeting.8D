@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8D Performance Assessment — Brain Performance Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '265754699054823233');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=265754699054823233&ev=PageView&noscript=1"
+/></noscript>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --purple: #5F3685;
+  --gold:   #E8B84B;
+  --bg:     #F8F7FC;
+  --black:  #1E1A2E;
+  --muted:  #6B6880;
+  --font:   'Plus Jakarta Sans', sans-serif;
+}
+html, body {
+  height: 100%;
+  background: var(--bg);
+  font-family: var(--font);
+  overflow: hidden;
+}
+
+/* ── HEADER ─── */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+  height: 52px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: rgba(248,247,252,0.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(95,54,133,0.10);
+}
+.header-logo { font-size: 18px; }
+.header-name {
+  font-size: 13px; font-weight: 600; color: var(--purple); letter-spacing: 0.01em;
+}
+
+/* ── IFRAME ─── */
+.iframe-wrap {
+  position: fixed;
+  top: 52px; left: 0; right: 0; bottom: 0;
+}
+.iframe-wrap iframe {
+  width: 100%; height: 100%;
+  border: none; display: block;
+}
+
+/* ── SUCCESS OVERLAY ─── */
+.success-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 40px 24px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.success-overlay.is-visible {
+  opacity: 1; pointer-events: all;
+}
+.success-icon {
+  font-size: 56px; margin-bottom: 24px;
+  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes pop {
+  0%   { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+.success-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800; color: var(--black);
+  line-height: 1.1; letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.success-sub {
+  font-size: 16px; color: var(--muted);
+  line-height: 1.75; max-width: 420px;
+  margin-bottom: 36px;
+}
+.success-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--black);
+  font-family: var(--font); font-size: 15px; font-weight: 700;
+  padding: 16px 44px; border-radius: 8px;
+  text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+  margin-bottom: 20px;
+}
+.success-cta:hover { opacity: 0.88; transform: translateY(-2px); }
+.success-note {
+  font-size: 12px; color: var(--muted);
+}
+.countdown {
+  display: inline-block;
+  background: rgba(95,54,133,0.08);
+  color: var(--purple);
+  font-size: 12px; font-weight: 600;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+/* ── LOADING ─── */
+.loading {
+  position: fixed; inset: 0; z-index: 5;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 16px;
+  transition: opacity 0.4s ease;
+}
+.loading.is-hidden { opacity: 0; pointer-events: none; }
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid rgba(95,54,133,0.12);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 13px; color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <span class="header-logo">🧠</span>
+  <span class="header-name">Brain Performance Coaching — 8D Assessment</span>
+</div>
+
+<!-- Loading state -->
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  <span class="loading-text">Loading your assessment…</span>
+</div>
+
+<!-- Google Form iframe -->
+<div class="iframe-wrap">
+  <iframe
+    id="assessment-iframe"
+    src="https://docs.google.com/forms/d/e/1FAIpQLScg8P897e8S7oUW_SelXLOI8IXYAdr2KCIZhPleA1o9TjMIHw/viewform?embedded=true"
+    title="8D Performance Assessment">
+  </iframe>
+</div>
+
+<!-- Success overlay (shown after form submit) -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-icon">🎉</div>
+  <h1 class="success-title">Assessment complete.<br>Time to take action.</h1>
+  <p class="success-sub">You now have a full picture of your mental performance.<br>The next step is a free 30-minute strategy call — let's build your plan.</p>
+  <div class="countdown" id="countdown">Redirecting in 5 seconds…</div>
+  <a href="https://cal.com/iaiacolella-braincoach/discovery" class="success-cta" id="booking-btn">
+    Book Your Free Strategy Call →
+  </a>
+  <p class="success-note">Free · 30 minutes · No commitment</p>
+</div>
+
+<script>
+const BOOKING_URL = 'https://cal.com/iaiacolella-braincoach/discovery';
+const REDIRECT_DELAY = 5; // seconds
+
+let formLoaded = false;
+const iframe = document.getElementById('assessment-iframe');
+const loading = document.getElementById('loading');
+const successOverlay = document.getElementById('success-overlay');
+const countdownEl = document.getElementById('countdown');
+
+// Hide loading spinner when form loads
+iframe.addEventListener('load', function() {
+  if (!formLoaded) {
+    // First load: form is ready
+    formLoaded = true;
+    loading.classList.add('is-hidden');
+  } else {
+    // Second load: form was submitted → show success + redirect
+    showSuccess();
+  }
+});
+
+function showSuccess() {
+  // Fire Meta Pixel completion event
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'CompleteRegistration');
+  }
+
+  successOverlay.classList.add('is-visible');
+
+  // Countdown
+  let remaining = REDIRECT_DELAY;
+  countdownEl.textContent = `Redirecting in ${remaining} seconds…`;
+
+  const timer = setInterval(() => {
+    remaining--;
+    if (remaining <= 0) {
+      clearInterval(timer);
+      countdownEl.textContent = 'Redirecting now…';
+      window.location.href = BOOKING_URL;
+    } else {
+      countdownEl.textContent = `Redirecting in ${remaining} second${remaining !== 1 ? 's' : ''}…`;
+    }
+  }, 1000);
+}
+
+// Fallback: if iframe detection fails (some browsers block cross-origin),
+// show a "Done?" button after 3 minutes
+setTimeout(() => {
+  if (!successOverlay.classList.contains('is-visible')) {
+    const fallback = document.createElement('div');
+    fallback.style.cssText = `
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      z-index: 50; background: var(--gold); color: var(--black);
+      font-family: var(--font); font-size: 14px; font-weight: 700;
+      padding: 14px 32px; border-radius: 8px; cursor: pointer;
+      box-shadow: 0 8px 32px rgba(95,54,133,0.18);
+      white-space: nowrap; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+    `;
+    fallback.innerHTML = '✅ Done with the assessment? Book your call →';
+    fallback.onclick = () => window.location.href = BOOKING_URL;
+    document.body.appendChild(fallback);
+  }
+}, 3 * 60 * 1000);
+</script>
+
+</body>
+</html>
