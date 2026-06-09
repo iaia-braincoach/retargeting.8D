@@ -747,7 +747,7 @@ footer { background: var(--black); padding: 44px 80px; display: flex; justify-co
             <div class="tf-opt" data-val="1–2 years" onclick="tfPickLast(this)"><span class="tf-key">C</span> 1–2 years</div>
             <div class="tf-opt" data-val="It's always been an issue" onclick="tfPickLast(this)"><span class="tf-key">D</span> It's always been an issue</div>
           </div>
-          <button class="tf-submit" id="tf-submit-btn" style="display:none" onclick="tfSubmit()">Continue to the Assessment →</button>
+          <button class="tf-submit" id="tf-submit-btn" style="display:none" onclick="tfSubmit()">Book My Free Discovery Call →</button>
           <button class="tf-back" onclick="tfPrev()" style="margin-top:10px">← Back</button>
         </div>
 
@@ -1160,22 +1160,23 @@ async function tfSubmit() {
     _subject:  'New lead — Brain Performance Coaching retargeting ad'
   };
 
+  // 1. Notify Iaia via Formspree
   try {
     await fetch('https://formspree.io/f/xykvzwqd', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(payload)
     });
-    // Fire Meta Pixel lead event
     if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
-  } catch(e) { /* redirect anyway */ }
+  } catch(e) { /* continue anyway */ }
 
-  try {
+try {
     localStorage.setItem('bpc_rt_completed', 'true');
     localStorage.setItem('bpc_rt_name', tfData.name || '');
   } catch(e) {}
 
-  window.location.href = './assessment.html';
+  // 3. Redirect to booking page (pass name/email for personalisation)
+  window.location.href = './thankyou.html?name=' + encodeURIComponent(tfData.name || '') + '&email=' + encodeURIComponent(tfData.email || '');
 }
 </script>
 
