@@ -166,11 +166,13 @@ async function submit(){
     });
   }catch(e){}
   try{if(typeof gtag==='function')gtag('event','form_submit',{source:BPC_SOURCE});}catch(e){}
+  try{if(typeof fbq==='function')fbq('track','Lead',{content_name:'8D Assessment',source:BPC_SOURCE});}catch(e){}
   try{
     localStorage.setItem('bpc_completed','true');
     localStorage.setItem('bpc_name',data.name||'');
   }catch(e){}
   try{if(typeof gtag==='function')gtag('event','booking_redirect',{source:BPC_SOURCE});}catch(e){}
+  try{if(typeof fbq==='function')fbq('track','Schedule',{source:BPC_SOURCE});}catch(e){}
   window.location.href='https://cal.com/iaiacolella-braincoach/discovery?name='+encodeURIComponent(data.name||'')+'&email='+encodeURIComponent(data.email||'')+'&utm_source='+encodeURIComponent(BPC_SOURCE);
 }
 
@@ -209,6 +211,12 @@ prog();
 function bpcTrack(name,params){
   try{if(typeof gtag==='function')gtag('event',name,Object.assign({source:BPC_SOURCE},params||{}));}catch(e){}
 }
+function bpcMeta(name,params){
+  try{if(typeof fbq==='function')fbq('track',name,params||{});}catch(e){}
+}
+function bpcMetaCustom(name,params){
+  try{if(typeof fbq==='function')fbq('trackCustom',name,Object.assign({source:BPC_SOURCE},params||{}));}catch(e){}
+}
 (function(){
   var seen={};
   document.addEventListener('DOMContentLoaded',function(){
@@ -218,7 +226,7 @@ function bpcTrack(name,params){
     var q=document.getElementById('qualify');
     if(q&&'IntersectionObserver' in window){
       new IntersectionObserver(function(es,o){
-        if(es[0].isIntersecting){bpcTrack('form_seen');o.disconnect();}
+        if(es[0].isIntersecting){bpcTrack('form_seen');bpcMetaCustom('FormSeen');o.disconnect();}
       },{threshold:.4}).observe(q);
     }
     document.querySelectorAll('a[href*="cal.com"]').forEach(function(a){
@@ -228,6 +236,6 @@ function bpcTrack(name,params){
   var _goTo=window.goTo;
   window.addEventListener('bpc:step',function(e){
     var n=e.detail;
-    if(!seen['s'+n]){seen['s'+n]=1;bpcTrack(n===1?'form_start':'form_step',{step:n});}
+    if(!seen['s'+n]){seen['s'+n]=1;bpcTrack(n===1?'form_start':'form_step',{step:n});if(n===1)bpcMeta('InitiateCheckout',{content_name:'8D Assessment form'});}
   });
 })();
