@@ -4,1181 +4,332 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>8D Performance Assessment — Brain Performance Coaching</title>
+<meta name="description" content="Free 8D Performance Assessment. Map exactly where your mental game is costing you results, across the 8 dimensions that decide how you compete. Used by national and international athletes.">
+<link rel="canonical" href="https://8d.brainperformancecoaching.com/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="8D Performance Assessment — Brain Performance Coaching">
+<meta property="og:description" content="You train your body. What about your mind? Free assessment across the 8 dimensions that decide how you compete.">
+<meta property="og:url" content="https://8d.brainperformancecoaching.com/">
+<meta property="og:image" content="https://8d.brainperformancecoaching.com/logo-brain.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-
-<!-- ═══ META PIXEL — replace YOUR_PIXEL_ID with actual ID ═══ -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '26575469905482323');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent', {
-  content_name: '8D Performance Assessment Landing Page',
-  content_category: 'Assessment',
-  content_type: 'product'
-});
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=26575469905482323&ev=PageView&noscript=1"
-/></noscript>
-<!-- ═══ END META PIXEL ═══ -->
-
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --purple:       #5F3685;
-  --purple-light: #7B4BA8;
-  --purple-dark:  #4A2869;
-  --purple-dim:   rgba(95,54,133,0.10);
-  --gold:         #E8B84B;
-  --bg:           #F8F7FC;
-  --bg2:          #FFFFFF;
-  --bg3:          #F0EDF8;
-  --black:        #1E1A2E;
-  --muted:        #6B6880;
-  --faint:        rgba(95,54,133,0.12);
-  --font: 'Plus Jakarta Sans', sans-serif;
-}
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--black); font-family: var(--font); font-weight: 300; overflow-x: hidden; line-height: 1.6; }
-
-/* ── NAV ───────────────────────────────────────── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: center;
-  padding: 18px 64px;
-  background: rgba(248,247,252,0.94); backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--faint);
-}
-.nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav-brand img { height: 34px; width: auto; }
-.nav-brand-name { font-size: 14px; font-weight: 600; color: var(--purple); }
-.btn-gold {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gold); color: var(--black);
-  font-family: var(--font); font-size: 13px; font-weight: 600;
-  padding: 11px 26px; border-radius: 6px; text-decoration: none;
-  transition: opacity 0.2s, transform 0.15s;
-}
-.btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
-.btn-gold-lg {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gold); color: var(--black);
-  font-family: var(--font); font-size: 14px; font-weight: 600;
-  padding: 15px 40px; border-radius: 7px; text-decoration: none;
-  transition: opacity 0.2s, transform 0.15s; width: fit-content;
-}
-.btn-gold-lg:hover { opacity: 0.88; transform: translateY(-2px); }
-
-/* ── HERO (centered, single column) ─────────────── */
-.hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 120px 80px 80px;
-  text-align: center;
-  position: relative; overflow: hidden;
-}
-.hero::before {
-  content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%);
-  width: 800px; height: 800px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(95,54,133,0.07) 0%, transparent 70%);
-  pointer-events: none;
-}
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--purple); margin-bottom: 28px;
-}
-.eyebrow::before { content: ''; width: 28px; height: 1.5px; background: var(--purple); }
-.eyebrow::after  { content: ''; width: 28px; height: 1.5px; background: var(--purple); }
-.hero-title { font-size: clamp(36px, 4.2vw, 62px); font-weight: 700; line-height: 1.06; letter-spacing: -0.03em; color: var(--black); margin-bottom: 8px; }
-.hero-title-accent { font-size: clamp(36px, 4.2vw, 62px); font-weight: 700; line-height: 1.06; letter-spacing: -0.03em; color: var(--purple); margin-bottom: 20px; }
-.hero-sub { font-size: 17px; line-height: 1.8; color: var(--muted); max-width: 540px; margin: 0 auto 36px; }
-.hero-video-area {
-  width: 100%; max-width: 800px; margin: 0 auto 40px;
-}
-.hero-video-area iframe { display: block; }
-.video-caption { margin-top: 14px; font-size: 13px; color: var(--muted); text-align: center; font-style: italic; }
-.hero-note { font-size: 12px; color: var(--muted); margin-top: 16px; }
-
-/* ── SHARED ─────────────────────────────────────── */
-.section-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple); margin-bottom: 14px; display: block; }
-.section-title { font-size: clamp(28px, 3vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--black); margin-bottom: 14px; }
-.section-title .accent { color: var(--purple); }
-.body-text { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 22px; }
-.body-text strong { color: var(--black); font-weight: 600; }
-
-/* ── TESTIMONIALS ──────────────────────────────── */
-.testimonials { padding: 112px 80px; background: var(--bg2); }
-.testi-header { margin-bottom: 56px; }
-.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.testi-card:last-child:nth-child(3n+1) { grid-column: 2; }
-.testi-card {
-  background: var(--bg); border: 1.5px solid var(--faint);
-  border-radius: 14px; padding: 28px; transition: border-color 0.2s, box-shadow 0.2s;
-  display: flex; flex-direction: column;
-}
-.testi-card:hover { border-color: rgba(95,54,133,0.28); box-shadow: 0 8px 28px rgba(95,54,133,0.07); }
-.testi-athlete { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.testi-avatar {
-  width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
-  background: var(--bg3); border: 2px solid var(--faint);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 700; color: var(--purple);
-}
-.testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.testi-name { font-size: 14px; font-weight: 600; color: var(--black); margin-bottom: 2px; }
-.testi-sport { font-size: 12px; color: var(--muted); }
-.testi-result {
-  display: inline-flex; align-items: center;
-  background: var(--purple-dim); color: var(--purple);
-  font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
-  padding: 5px 12px; border-radius: 20px; margin-bottom: 14px; width: fit-content;
-}
-.testi-quote { font-size: 14px; line-height: 1.7; color: var(--muted); font-style: italic; flex: 1; }
-.testi-btn {
-  background: none; border: 1.5px solid var(--faint); padding: 8px 16px; border-radius: 6px; cursor: pointer;
-  font-family: var(--font); font-size: 12px; font-weight: 500; color: var(--purple);
-  margin-top: 16px; transition: border-color 0.2s, background 0.2s; text-align: left; width: fit-content;
-}
-.testi-btn:hover { border-color: var(--purple); background: var(--purple-dim); }
-
-/* ── MODAL ─────────────────────────────────────── */
-.modal-overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(30,26,46,0.65); backdrop-filter: blur(8px);
-  display: flex; align-items: center; justify-content: center; padding: 24px;
-  opacity: 0; pointer-events: none; transition: opacity 0.3s;
-}
-.modal-overlay.is-open { opacity: 1; pointer-events: all; }
-.modal-card {
-  background: var(--bg2); border-radius: 20px; padding: 48px;
-  max-width: 620px; width: 100%; max-height: 82vh; overflow-y: auto;
-  position: relative; transform: translateY(24px); transition: transform 0.3s;
-  box-shadow: 0 32px 80px rgba(30,26,46,0.25);
-}
-.modal-overlay.is-open .modal-card { transform: translateY(0); }
-.modal-close {
-  position: absolute; top: 18px; right: 18px;
-  width: 36px; height: 36px; border-radius: 50%; border: none;
-  background: var(--bg); cursor: pointer; display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: var(--muted); transition: background 0.2s; line-height: 1;
-}
-.modal-close:hover { background: var(--bg3); color: var(--black); }
-.modal-athlete { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
-.modal-avatar {
-  width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
-  background: var(--bg3); border: 2px solid var(--faint);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 26px; font-weight: 700; color: var(--purple);
-}
-.modal-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.modal-name { font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
-.modal-sport { font-size: 13px; color: var(--muted); }
-.modal-result {
-  display: inline-flex; background: var(--purple-dim); color: var(--purple);
-  font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 24px;
-}
-.modal-text { font-size: 15px; line-height: 1.85; color: var(--muted); font-style: italic; }
-.modal-text p + p { margin-top: 14px; }
-
-/* ── 8D ASSESSMENT ─────────────────────────────── */
-.assessment-section { padding: 112px 80px; background: var(--bg); }
-.assessment-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: start; }
-.assessment-visual {
-  background: var(--bg2); border-radius: 16px; padding: 40px;
-  border: 1.5px solid var(--faint);
-  display: flex; align-items: center; justify-content: center;
-  position: sticky; top: 100px;
-}
-.assessment-visual img { width: 100%; max-width: 360px; display: block; border-radius: 8px; }
-.assessment-content .section-title { margin-bottom: 16px; }
-.assessment-desc { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 32px; }
-.dims { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 36px; }
-.dim {
-  background: var(--bg2); border: 1.5px solid var(--faint);
-  border-radius: 9px; padding: 14px 16px;
-  display: flex; align-items: center; gap: 10px; transition: border-color 0.2s;
-}
-.dim:hover { border-color: rgba(95,54,133,0.25); }
-.dim-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-.dim-name { font-size: 13px; font-weight: 500; color: var(--black); }
-
-/* ── FORM (6-step) ─────────────────────────────── */
-.qual-section { padding: 112px 80px; background: var(--bg3); }
-.qual-inner { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
-.qual-intro .section-title { margin-bottom: 16px; }
-.qual-text { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 20px; }
-.qual-promise { display: flex; gap: 10px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
-.qual-promise::before { content: '→'; color: var(--purple); font-weight: 700; flex-shrink: 0; }
-
-.typeform-wrap {
-  background: var(--bg2); border-radius: 16px; padding: 44px;
-  border: 1.5px solid var(--faint);
-  min-height: 380px; display: flex; flex-direction: column;
-}
-.tf-progress { display: flex; align-items: center; gap: 14px; margin-bottom: 36px; }
-.tf-bar { flex: 1; height: 3px; background: var(--faint); border-radius: 2px; overflow: hidden; }
-.tf-bar-fill { height: 100%; background: var(--purple); border-radius: 2px; transition: width 0.4s ease; }
-.tf-count { font-size: 12px; color: var(--muted); font-weight: 500; white-space: nowrap; min-width: 36px; text-align: right; }
-.tf-steps { flex: 1; position: relative; }
-.tf-step {
-  position: absolute; top: 0; left: 0; right: 0;
-  opacity: 0; transform: translateX(40px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  pointer-events: none;
-}
-.tf-step.is-active {
-  position: relative; opacity: 1; transform: translateX(0); pointer-events: all;
-}
-.tf-step.is-exit { opacity: 0; transform: translateX(-40px); }
-.tf-q { font-size: 17px; font-weight: 600; color: var(--black); margin-bottom: 22px; line-height: 1.4; }
-.tf-input {
-  width: 100%; padding: 12px 0;
-  border: none; border-bottom: 2px solid var(--faint);
-  background: transparent; font-family: var(--font); font-size: 16px; color: var(--black);
-  outline: none; transition: border-color 0.2s; display: block; margin-bottom: 6px;
-}
-.tf-input:focus { border-bottom-color: var(--purple); }
-.tf-input::placeholder { color: rgba(107,104,128,0.5); }
-.tf-input.is-invalid { border-bottom-color: #E63946; }
-.tf-error { font-size: 12px; color: #E63946; margin-bottom: 14px; min-height: 18px; display: block; }
-.tf-opts { display: flex; flex-direction: column; gap: 9px; }
-.tf-opt {
-  display: flex; align-items: center; gap: 12px;
-  padding: 12px 16px; border: 1.5px solid var(--faint); border-radius: 8px;
-  cursor: pointer; font-size: 14px; color: var(--muted); background: var(--bg);
-  transition: border-color 0.15s, background 0.15s, color 0.15s; user-select: none;
-}
-.tf-opt:hover { border-color: var(--purple); background: var(--purple-dim); color: var(--black); }
-.tf-opt.selected { border-color: var(--purple); background: var(--purple-dim); color: var(--black); font-weight: 500; }
-.tf-key {
-  width: 22px; height: 22px; border-radius: 4px; border: 1.5px solid rgba(107,104,128,0.3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700; color: var(--muted); flex-shrink: 0;
-  transition: all 0.15s;
-}
-.tf-opt.selected .tf-key { border-color: var(--purple); background: var(--purple); color: white; }
-.tf-continue {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--purple); color: white; border: none; cursor: pointer;
-  font-family: var(--font); font-size: 14px; font-weight: 500;
-  padding: 12px 28px; border-radius: 7px; transition: background 0.2s; margin-top: 14px;
-}
-.tf-continue:hover { background: var(--purple-dark); }
-.tf-back {
-  background: none; border: none; font-family: var(--font); font-size: 12px;
-  color: var(--muted); cursor: pointer; padding: 8px 0; margin-top: 6px; display: block;
-  transition: color 0.2s;
-}
-.tf-back:hover { color: var(--black); }
-.tf-submit {
-  width: 100%; padding: 15px; border-radius: 8px;
-  background: var(--gold); color: var(--black); border: none; cursor: pointer;
-  font-family: var(--font); font-size: 15px; font-weight: 700;
-  transition: opacity 0.2s, transform 0.15s; margin-top: 4px; letter-spacing: 0.01em;
-}
-.tf-submit:hover { opacity: 0.88; transform: translateY(-1px); }
-.tf-submitting { opacity: 0.6; pointer-events: none; }
-
-/* ── PHONE FIELD ────────────────────────────────── */
-.tf-phone-row { display: flex; gap: 10px; align-items: flex-end; margin-bottom: 6px; }
-.tf-phone-prefix {
-  flex-shrink: 0; max-width: 140px;
-  border: none; border-bottom: 2px solid var(--faint);
-  background: transparent; font-family: var(--font); font-size: 15px; color: var(--black);
-  outline: none; padding: 12px 22px 12px 0;
-  transition: border-color 0.2s; cursor: pointer;
-  appearance: none; -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%236B6880' fill='none' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 2px center;
-}
-.tf-phone-prefix:focus { border-bottom-color: var(--purple); }
-.tf-phone-number {
-  flex: 1;
-  border: none; border-bottom: 2px solid var(--faint);
-  background: transparent; font-family: var(--font); font-size: 16px; color: var(--black);
-  outline: none; padding: 12px 0;
-  transition: border-color 0.2s;
-}
-.tf-phone-number:focus { border-bottom-color: var(--purple); }
-.tf-phone-number::placeholder { color: rgba(107,104,128,0.5); }
-.tf-phone-number.is-invalid { border-bottom-color: #E63946; }
-
-/* ── FINAL CTA ─────────────────────────────────── */
-.final-cta { background: var(--purple); padding: 100px 80px; text-align: center; }
-.final-cta .section-tag { color: rgba(255,255,255,0.5); }
-.final-cta-title { font-size: clamp(26px, 3vw, 44px); font-weight: 700; line-height: 1.15; color: white; letter-spacing: -0.02em; max-width: 720px; margin: 16px auto 22px; }
-.final-cta-sub { font-size: 16px; line-height: 1.75; color: rgba(255,255,255,0.62); max-width: 500px; margin: 0 auto 40px; }
-.final-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 20px; }
-
-/* ── FOOTER ────────────────────────────────────── */
-footer { background: var(--black); padding: 44px 80px; display: flex; justify-content: space-between; align-items: center; }
-.footer-brand { display: flex; align-items: center; gap: 10px; }
-.footer-brand img { height: 28px; width: auto; filter: brightness(10); }
-.footer-brand-name { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); }
-.footer-links { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.footer-link { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-.footer-link:hover { color: white; }
-.footer-right { text-align: right; }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); margin-bottom: 4px; }
-.footer-disclaimer { font-size: 11px; color: rgba(255,255,255,0.2); line-height: 1.5; max-width: 340px; }
-
-/* ── RESPONSIVE ────────────────────────────────── */
-@media (max-width: 1024px) {
-  nav { padding: 16px 28px; }
-  .hero { padding: 100px 28px 60px; }
-  .testimonials, .assessment-section, .qual-section { padding: 72px 28px; }
-  .testi-grid { grid-template-columns: 1fr; }
-  .testi-card:last-child:nth-child(3n+1) { grid-column: auto; }
-  .assessment-inner { grid-template-columns: 1fr; gap: 40px; }
-  .assessment-visual { position: static; }
-  .qual-inner { grid-template-columns: 1fr; gap: 40px; }
-  .typeform-wrap { padding: 32px 24px; }
-  .final-cta { padding: 80px 28px; }
-  footer { flex-direction: column; gap: 24px; padding: 36px 28px; text-align: center; }
-  .footer-right { text-align: center; }
-  .footer-disclaimer { max-width: 100%; }
-  .modal-card { padding: 32px 24px; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/landing.css">
+<!-- GA4 — replace G-LANDING000 with the new property ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LANDING000"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-LANDING000');</script>
 </head>
-<body>
+<body class="lp" data-palette="purple" data-typo="sans">
 
-<!-- ═══ MODAL ════════════════════════════════════════ -->
-<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-athlete">
-      <div class="modal-avatar" id="modal-avatar"></div>
+<header class="lp-header">
+  <div class="lp-header-inner is-centered">
+    <img src="logo-brain.png" alt="Brain Performance Coaching" width="44" height="36">
+    <span>Brain Performance Coaching</span>
+  </div>
+</header>
+
+<main>
+
+<section class="lp-hero">
+  <div class="lp-shell">
+    <h1 class="lp-hook">Discover the <b>NEW</b> &amp; <b>SIMPLE</b> way <b>ATHLETES</b> just like you&hellip;<br>Are hitting <b>PBs</b> in a single season<br><b>WITHOUT</b> training <span class="u">harder, longer, or more often</span></h1>
+    <p class="lp-sub">The 8D Performance Assessment maps exactly where your mental game is costing you results — across the 8 dimensions that determine how you compete.</p>
+    <div class="lp-video-frame">
+      <div class="ratio">
+        <iframe src="https://www.loom.com/embed/9d0eaf526d3f4aeca5c1071ed59a8c9a?hide_owner=true&amp;hide_share=true&amp;hide_title=true&amp;hideEmbedTopBar=true" allowfullscreen title="A personal message from Iaia"></iframe>
+      </div>
+    </div>
+    <p class="lp-video-cap">A personal message from Iaia — watch before you start</p>
+    <div class="lp-cta-row"><a class="btn btn-accent btn-lg" href="#qualify">Take the free assessment <span class="arrow">&rarr;</span></a></div>
+    <p class="lp-trust">~30 MINUTES · CONFIDENTIAL · COMPETITIVE ATHLETES</p>
+  </div>
+</section>
+
+<section class="lp-section" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="lp-shell">
+    <div class="lp-head">
+      <span class="eyebrow">In their own words</span>
+      <h2>Hear it from the <span class="em">athletes</span>.</h2>
+      <p>Short clips, straight from them. Full interviews coming soon.</p>
+    </div>
+    <div class="vt-grid vt-reels vt-reels-3">
+      <article class="vt-card">
+        <div class="vt-media">
+          <iframe src="https://share.descript.com/embed/n95VovvvBCr" title="Saif — Football" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="vt-body">
+          <div class="vt-name">Saif</div>
+          <div class="vt-sport">Professional Football Player</div>
+          <span class="vt-result">Pressure &amp; overthinking resolved</span>
+        </div>
+      </article>
+      <article class="vt-card">
+        <div class="vt-media">
+          <iframe src="https://share.descript.com/embed/qI4e2mL5aZx" title="Hakan — 400m" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="vt-body">
+          <div class="vt-name">Hakan</div>
+          <div class="vt-sport">400m &middot; National &amp; International</div>
+          <span class="vt-result">48.3s &rarr; 47.5s &middot; British Indoor Final</span>
+        </div>
+      </article>
+      <article class="vt-card">
+        <div class="vt-media">
+          <iframe src="https://share.descript.com/embed/dwxMav9A2wh" title="Alwaaz — Sprinting" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="vt-body">
+          <div class="vt-name">Alwaaz</div>
+          <div class="vt-sport">100m / 200m &middot; Sprinting</div>
+          <span class="vt-result">3 PBs in one indoor season</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lp-section">
+  <div class="lp-shell">
+    <div class="lp-head is-wide">
+      <span class="eyebrow">Results</span>
+      <h2>What athletes across different <span class="em">sports</span> have achieved.</h2>
+    </div>
+    <div class="lp-testi-grid">
+      <article class="testi-card">
+        <span class="testi-result">New state record</span>
+        <p class="testi-quote">Now, I don’t have that same feeling of inadequacy when I go to competitions. Iaia helped me understand why I felt that way and change how I approached performance. I set a new state record and I no longer see someone as a better archer than me.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/kiara.jpg" alt="Kiara" loading="lazy" onerror="this.parentElement.textContent='K'"></div>
+          <div><div class="testi-name">Kiara</div><div class="testi-sport">Archery</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">2nd internationally &middot; Sub-24s 200m</span>
+        <p class="testi-quote">I finished 2nd in the 100m final with a PB and broke 24 seconds in the 200m for the first time. There was not a single negative thought in my head that day.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/aaliyah.jpg" alt="Aaliyah" loading="lazy" onerror="this.parentElement.textContent='A'"></div>
+          <div><div class="testi-name">Aaliyah</div><div class="testi-sport">100m / 200m Sprinting &middot; International</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Confidence 3 &rarr; 9</span>
+        <p class="testi-quote">I was rated 3/10 before the programme. Now I can confidently say I'm at 9/10 consistently on a daily basis. My mental clarity has skyrocketed.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/hagen.jpg" alt="Hagen" loading="lazy" onerror="this.parentElement.textContent='H'"></div>
+          <div><div class="testi-name">Hagen</div><div class="testi-sport">100m / 200m Sprinting</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Confidence 10/10</span>
+        <p class="testi-quote">Right now I'd rate my confidence at a 10 out of 10. I have the tools. I see no reason why I can't achieve my goals.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/tobias.jpg" alt="Tobias" loading="lazy" onerror="this.parentElement.textContent='T'"></div>
+          <div><div class="testi-name">Tobias</div><div class="testi-sport">High Jump · English Schools Champion</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Fastest training times ever</span>
+        <p class="testi-quote">I've been hitting some of the fastest times I've ever done in training. Visualisation and journaling are now part of my daily routine.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/jessica.jpg" alt="Jessica" loading="lazy" onerror="this.parentElement.textContent='J'"></div>
+          <div><div class="testi-name">Jessica</div><div class="testi-sport">Butterfly Swimming · Jamaican National</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Mindset optimised</span>
+        <p class="testi-quote">My thought process is completely different when I make mistakes now. I look for things I did right first — and it makes the whole experience far more positive.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/sulaiman.jpg" alt="Sulaiman" loading="lazy" onerror="this.parentElement.textContent='S'"></div>
+          <div><div class="testi-name">Sulaiman</div><div class="testi-sport">Decathlon · International</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Mindset through injury</span>
+        <p class="testi-quote">My injury hasn't healed yet, but I now feel in a much stronger place to tackle my recovery and return to running when my body is ready.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/constance.jpg" alt="Constance" loading="lazy" onerror="this.parentElement.textContent='C'"></div>
+          <div><div class="testi-name">Constance</div><div class="testi-sport">Cross Country</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Multiple PBs · Anxiety reduced</span>
+        <p class="testi-quote">Journaling every morning and breathing techniques truly changed my life — reducing my anxiety not only in sport, but in everyday life as well.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/hugo.jpg" alt="Hugo" loading="lazy" onerror="this.parentElement.textContent='H'"></div>
+          <div><div class="testi-name">Hugo</div><div class="testi-sport">200m / 400m · Montreal</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <span class="testi-result">Quieter inner critic</span>
+        <p class="testi-quote">She helped me quiet the inner noise and manage my self-criticism. That mental shift made everything else — training, recovery, competition — so much easier.</p>
+        <div class="testi-author">
+          <div class="testi-avatar"><img src="athletes/kieran.jpg" alt="Kieran" loading="lazy" onerror="this.parentElement.textContent='K'"></div>
+          <div><div class="testi-name">Kieran</div><div class="testi-sport">Athlete</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lp-section" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="lp-shell">
+    <div class="lp-head is-wide">
+      <span class="eyebrow">The Assessment</span>
+      <h2>Find out exactly where your mental game is <span class="em">breaking down</span>.</h2>
+      <p>Honest answers give you useful data. Polished answers waste your time. There are no right or wrong responses.</p>
+    </div>
+    <div class="lp-wheel-row">
+      <div class="wheel-stage" data-wheel></div>
       <div>
-        <div class="modal-name" id="modal-name"></div>
-        <div class="modal-sport" id="modal-sport"></div>
+        <div class="wheel-detail" data-wheel-detail>
+          <div class="wheel-detail-head"><span class="wheel-detail-dot" style="background:#E63946"></span><span class="wheel-detail-cap">Dimension 01</span></div>
+          <h3 class="wheel-detail-title">Focus &amp; Attention</h3>
+          <p class="wheel-detail-text">Direct and sustain mental concentration on what matters most — under pressure, fatigue and distraction.</p>
+          <p class="wheel-detail-text" style="margin-top:16px">Determines whether you execute your skills with precision from start to finish — or whether external factors, mistakes, or mental noise pull you away from your task.</p>
+        </div>
+        <div style="margin-top:28px"><a class="btn btn-accent btn-lg" href="#qualify">Take the assessment <span class="arrow">&rarr;</span></a></div>
       </div>
-    </div>
-    <div class="modal-result" id="modal-result"></div>
-    <div class="modal-text" id="modal-text"></div>
-  </div>
-</div>
-
-<!-- ═══ NAV (logo only) ══════════════════════════════ -->
-<nav>
-  <a href="#" class="nav-brand">
-    <img src="logo-brain.png" alt="BPC">
-    <span class="nav-brand-name">Brain Performance Coaching</span>
-  </a>
-</nav>
-
-<!-- ═══ HERO (centered) ══════════════════════════════ -->
-<section class="hero">
-  <div class="eyebrow">Brain Performance Coaching</div>
-  <h1 class="hero-title">You train your body.</h1>
-  <h1 class="hero-title-accent">What about your mind?</h1>
-  <p class="hero-sub">The 8D Performance Assessment maps exactly where your mental game is costing you results — across the 8 dimensions that determine how you compete.</p>
-
-  <div class="hero-video-area">
-    <div style="width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;box-shadow:0 32px 80px rgba(95,54,133,0.22);background:var(--bg3);">
-      <iframe
-        src="https://www.loom.com/embed/9d0eaf526d3f4aeca5c1071ed59a8c9a?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-        frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen
-        style="width:100%;height:100%;border:none;display:block;">
-      </iframe>
-    </div>
-    <p class="video-caption">A personal message from Iaia — watch before you start</p>
-  </div>
-
-  <a href="#qualify" class="btn-gold-lg">Take the Free Assessment →</a>
-  <p class="hero-note">~30 minutes &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; Used by national & international athletes</p>
-</section>
-
-<!-- ═══ TESTIMONIALS ══════════════════════════════════ -->
-<section class="testimonials" id="results">
-  <div class="testi-header">
-    <span class="section-tag">Results</span>
-    <h2 class="section-title">What athletes across<br>different sports <span class="accent">have achieved</span></h2>
-  </div>
-  <div class="testi-grid">
-
-    <!-- Alwaaz -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/alwaaz.jpg" alt="Alwaaz" onerror="this.parentElement.textContent='A'"></div>
-        <div><div class="testi-name">Alwaaz</div><div class="testi-sport">100m / 200m · Sprinting</div></div>
-      </div>
-      <div class="testi-result">3 PBs in one indoor season</div>
-      <p class="testi-quote">"I've hit three PBs this indoor season. I'm no longer scared of getting injured. Now I step onto the track with confidence."</p>
-      <button class="testi-btn" onclick="openModal('alwaaz')">Read full story →</button>
-    </div>
-
-    <!-- Aaliyah -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/aaliyah.jpg" alt="Aaliyah" onerror="this.parentElement.textContent='A'"></div>
-        <div><div class="testi-name">Aaliyah</div><div class="testi-sport">100m / 200m · Sprinting</div></div>
-      </div>
-      <div class="testi-result">2nd place internationally · Broke 24s in 200m</div>
-      <p class="testi-quote">"I finished 2nd in the 100m final with a PB and broke 24 seconds in the 200m for the first time. There was not a single negative thought in my head that day."</p>
-      <button class="testi-btn" onclick="openModal('aaliyah')">Read full story →</button>
-    </div>
-
-    <!-- Jennifer -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/jennifer.jpg" alt="Jennifer Eduwu" onerror="this.parentElement.textContent='J'"></div>
-        <div><div class="testi-name">Jennifer</div><div class="testi-sport">Sprinting · GB</div></div>
-      </div>
-      <div class="testi-result">9.3s → 9.1s · Confidence 9/10</div>
-      <p class="testi-quote">"I set a goal of 9.2s — and ended up running 9.1s. That was a huge win. I now rate my confidence 9 out of 10 in achieving my dreams."</p>
-      <button class="testi-btn" onclick="openModal('jennifer')">Read full story →</button>
-    </div>
-
-    <!-- Jessica -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/jessica.jpg" alt="Jessica Calderbank" onerror="this.parentElement.textContent='J'"></div>
-        <div><div class="testi-name">Jessica</div><div class="testi-sport">Butterfly Swimming · Jamaican National</div></div>
-      </div>
-      <div class="testi-result">Fastest training times ever · Confidence 9/10</div>
-      <p class="testi-quote">"I've been hitting some of the fastest times I've ever done in training. Visualisation and journaling are now part of my daily routine."</p>
-      <button class="testi-btn" onclick="openModal('jessica')">Read full story →</button>
-    </div>
-
-    <!-- Isaac -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/isaac.jpg" alt="Isaac" onerror="this.parentElement.textContent='I'"></div>
-        <div><div class="testi-name">Isaac</div><div class="testi-sport">400m · National Level</div></div>
-      </div>
-      <div class="testi-result">Confidence 4/10 → 9/10</div>
-      <p class="testi-quote">"When I started, my confidence was 4 out of 10. Now I'm at 9. I feel mentally stronger than ever — and back in control for the first time in a long time."</p>
-      <button class="testi-btn" onclick="openModal('isaac')">Read full story →</button>
-    </div>
-
-    <!-- Jenna -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/jenna.jpg" alt="Jenna Blundell" onerror="this.parentElement.textContent='J'"></div>
-        <div><div class="testi-name">Jenna</div><div class="testi-sport">100m Hurdles</div></div>
-      </div>
-      <div class="testi-result">Confidence & visualisation transformed</div>
-      <p class="testi-quote">"I learned how to properly immerse myself in visualisation and apply it consistently in competition. Training your mind is essential if you want to get the most out of yourself."</p>
-      <button class="testi-btn" onclick="openModal('jenna')">Read full story →</button>
-    </div>
-
-    <!-- Tobias -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/tobias.jpg" alt="Tobias Cherry" onerror="this.parentElement.textContent='T'"></div>
-        <div><div class="testi-name">Tobias</div><div class="testi-sport">High Jump · English Schools National Champion</div></div>
-      </div>
-      <div class="testi-result">2.10m PB · Confidence 10/10</div>
-      <p class="testi-quote">"Right now I'd rate my confidence at a 10 out of 10. I have the tools. I see no reason why I can't achieve my goals."</p>
-      <button class="testi-btn" onclick="openModal('tobias')">Read full story →</button>
-    </div>
-
-    <!-- Hugo -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/hugo.jpg" alt="Hugo" onerror="this.parentElement.textContent='H'"></div>
-        <div><div class="testi-name">Hugo</div><div class="testi-sport">200m / 400m · Montreal</div></div>
-      </div>
-      <div class="testi-result">Multiple PBs in training & competition</div>
-      <p class="testi-quote">"Journaling every morning and breathing techniques truly changed my life — reducing my anxiety not only in sport, but in everyday life as well."</p>
-      <button class="testi-btn" onclick="openModal('hugo')">Read full story →</button>
-    </div>
-
-    <!-- Ray -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/ray.jpg" alt="Ray Lenore" onerror="this.parentElement.textContent='R'"></div>
-        <div><div class="testi-name">Ray</div><div class="testi-sport">800m · Track & Field</div></div>
-      </div>
-      <div class="testi-result">7th BUCS Indoors · 1:49 800m</div>
-      <p class="testi-quote">"I no longer feel controlled by chance emotionally. I now know when to relax and when to push. Training has become far more enjoyable because I feel in control."</p>
-      <button class="testi-btn" onclick="openModal('ray')">Read full story →</button>
-    </div>
-
-    <!-- Hakan -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/hakan.jpg" alt="Hakan Bello" onerror="this.parentElement.textContent='H'"></div>
-        <div><div class="testi-name">Hakan</div><div class="testi-sport">400m · National & International</div></div>
-      </div>
-      <div class="testi-result">48.3s → 47.5s · British Indoor Final</div>
-      <p class="testi-quote">"I came in with a PB of 48.3 seconds and improved to 47.5. Making a British indoor final wasn't even in my sights before starting this coaching."</p>
-      <button class="testi-btn" onclick="openModal('hakan')">Read full story →</button>
-    </div>
-
-    <!-- Derek -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/derek.jpg" alt="Derek Kinlook" onerror="this.parentElement.textContent='D'"></div>
-        <div><div class="testi-name">Derek</div><div class="testi-sport">Sprinting · GB</div></div>
-      </div>
-      <div class="testi-result">Confidence 8/10 · GB Sprinter</div>
-      <p class="testi-quote">"I'm more focused and calm, especially during races. By being mentally centred, my performance naturally got better. I'd rate my confidence at a solid 8 out of 10."</p>
-      <button class="testi-btn" onclick="openModal('derek')">Read full story →</button>
-    </div>
-
-    <!-- Hagen -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/hagen.jpg" alt="Hagen" onerror="this.parentElement.textContent='H'"></div>
-        <div><div class="testi-name">Hagen</div><div class="testi-sport">100m / 200m Sprinting</div></div>
-      </div>
-      <div class="testi-result">Confidence 3/10 → 9/10</div>
-      <p class="testi-quote">"I was rated 3/10 before the programme. Now I can confidently say I'm at 9/10 consistently on a daily basis. My mental clarity has skyrocketed."</p>
-      <button class="testi-btn" onclick="openModal('hagen')">Read full story →</button>
-    </div>
-
-    <!-- Kieran -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/kieran.jpg" alt="Kieran Shah" onerror="this.parentElement.textContent='K'"></div>
-        <div><div class="testi-name">Kieran</div><div class="testi-sport">Sprinting · National Level</div></div>
-      </div>
-      <div class="testi-result">Focus & confidence rebuilt after injury</div>
-      <p class="testi-quote">"I'm now able to switch on and off that zone of focus when I need it. These strategies aren't just for sport — they're something I use in everyday life too."</p>
-      <button class="testi-btn" onclick="openModal('kieran')">Read full story →</button>
-    </div>
-
-    <!-- Eli -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/eli.jpg" alt="Eli" onerror="this.parentElement.textContent='E'"></div>
-        <div><div class="testi-name">Eli</div><div class="testi-sport">100m / 200m · Welsh International</div></div>
-      </div>
-      <div class="testi-result">2 PBs in Cardiff · Fastest season ever</div>
-      <p class="testi-quote">"I went into the race completely relaxed, used the visualisations we'd practised, and came away with two PBs in the 100m and 200m."</p>
-      <button class="testi-btn" onclick="openModal('eli')">Read full story →</button>
-    </div>
-
-    <!-- Theo -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/theo.jpg" alt="Theo" onerror="this.parentElement.textContent='T'"></div>
-        <div><div class="testi-name">Theo</div><div class="testi-sport">100m / 200m · National Level</div></div>
-      </div>
-      <div class="testi-result">Sub-22s 200m · Hit national standards</div>
-      <p class="testi-quote">"I finally broke 22 seconds in the 200m — a goal I've had since 2022. I've become a more confident, more focused, more consistent athlete."</p>
-      <button class="testi-btn" onclick="openModal('theo')">Read full story →</button>
-    </div>
-
-    <!-- Constance -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/constance.jpg" alt="Constance" onerror="this.parentElement.textContent='C'"></div>
-        <div><div class="testi-name">Constance</div><div class="testi-sport">Cross Country</div></div>
-      </div>
-      <div class="testi-result">Mindset transformed through injury</div>
-      <p class="testi-quote">"My injury hasn't healed yet, but I now feel in a much stronger place to tackle my recovery and return to running when my body is ready."</p>
-      <button class="testi-btn" onclick="openModal('constance')">Read full story →</button>
-    </div>
-
-    <!-- Sulaiman -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/sulaiman.jpg" alt="Sulaiman Ouiles" onerror="this.parentElement.textContent='S'"></div>
-        <div><div class="testi-name">Sulaiman</div><div class="testi-sport">Decathlon · International</div></div>
-      </div>
-      <div class="testi-result">Visualisation & mindset optimised</div>
-      <p class="testi-quote">"My thought process is completely different when I make mistakes now. I look for things I did right first — and it makes the whole experience far more positive."</p>
-      <button class="testi-btn" onclick="openModal('sulaiman')">Read full story →</button>
-    </div>
-
-    <!-- Ollie -->
-    <div class="testi-card">
-      <div class="testi-athlete">
-        <div class="testi-avatar"><img src="athletes/ollie.jpg" alt="Ollie" onerror="this.parentElement.textContent='O'"></div>
-        <div><div class="testi-name">Ollie</div><div class="testi-sport">400m · Sheffield & Ireland</div></div>
-      </div>
-      <div class="testi-result">PB +1s · Semi-finals at Nationals · Confidence 9.5/10</div>
-      <p class="testi-quote">"I PB'd by over a second in the 400m and qualified for the semi-finals at nationals — something I honestly didn't believe I could do."</p>
-      <button class="testi-btn" onclick="openModal('ollie')">Read full story →</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══ 8D ASSESSMENT ═════════════════════════════════ -->
-<section class="assessment-section" id="assessment">
-  <div class="assessment-inner">
-    <div class="assessment-visual">
-      <img src="assessment-wheel.jpg" alt="8D Performance Assessment Wheel">
-    </div>
-    <div class="assessment-content">
-      <span class="section-tag">The Assessment</span>
-      <h2 class="section-title">Find out exactly where your<br><span class="accent">mental game</span> is breaking down.</h2>
-      <p class="assessment-desc">The 8D Performance Assessment maps your brain performance across 8 dimensions that directly impact how you compete. Honest answers give you useful data. Polished answers waste your time. There are no right or wrong responses.</p>
-      <div class="dims">
-        <div class="dim"><div class="dim-dot" style="background:#E63946"></div><span class="dim-name">Focus & Attention</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#9B7DD4"></div><span class="dim-name">Emotional Regulation</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#F4C542"></div><span class="dim-name">Confidence</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#4A90D9"></div><span class="dim-name">Self-Talk</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#F5864B"></div><span class="dim-name">Motivation</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#6B46C1"></div><span class="dim-name">Self-Awareness</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#9DC63D"></div><span class="dim-name">State Management</span></div>
-        <div class="dim"><div class="dim-dot" style="background:#3DB5C4"></div><span class="dim-name">Visualisation</span></div>
-      </div>
-      <a href="#qualify" class="btn-gold-lg">Take the Assessment →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ FORM (6 steps) ════════════════════════════════ -->
-<section class="qual-section" id="qualify">
-  <div class="qual-inner">
-    <div class="qual-intro">
-      <span class="section-tag">Before You Start</span>
-      <h2 class="section-title">A few quick<br><span class="accent">questions first.</span></h2>
-      <p class="qual-text">These take 2 minutes. Once you submit, you'll go directly to the 8D Assessment.</p>
-      <div class="qual-promise">Completely confidential — only Iaia sees your answers</div>
-      <div class="qual-promise">No spam, no sales calls</div>
-      <div class="qual-promise">Under 2 minutes</div>
+<section class="lp-section" id="qualify">
+  <div class="lp-shell">
+    <div class="lp-head is-wide">
+      <span class="eyebrow">Before you start</span>
+      <h2>And these are just a few of the <span class="em">50+ athletes</span> I've worked with. Want me to help you achieve the same?</h2>
+      <p>These take 2 minutes. Then you book your call — and get the 8D Assessment straight after.</p>
     </div>
+    <div class="tf-wrap">
+      <div class="tf-bar"><i id="tfBar"></i></div>
+      <div class="tf-count" id="tfCount">1 / 6</div>
 
-    <div class="typeform-wrap">
-      <div class="tf-progress">
-        <div class="tf-bar"><div class="tf-bar-fill" id="tf-fill" style="width:16.6%"></div></div>
-        <span class="tf-count" id="tf-count">1 / 6</span>
+      <div class="tf-step is-active" data-step="1">
+        <div class="tf-q">What's your name?</div>
+        <input class="tf-in" type="text" name="name" placeholder="First and last name" autocomplete="name">
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="btn btn-accent" type="button" data-tf-next>Continue <span class="arrow">&rarr;</span></button></div>
       </div>
-      <div class="tf-steps" id="tf-steps">
 
-        <!-- Step 1: Name -->
-        <div class="tf-step is-active" data-index="0">
-          <div class="tf-q">What's your name? 👋</div>
-          <input class="tf-input" type="text" id="tf-name" placeholder="First and last name" autocomplete="name">
-          <span class="tf-error" id="err-name"></span>
-          <button class="tf-continue" onclick="tfNext()">Continue →</button>
+      <div class="tf-step" data-step="2">
+        <div class="tf-q">What's your email?</div>
+        <input class="tf-in" type="email" name="email" placeholder="you@email.com" autocomplete="email">
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="btn btn-accent" type="button" data-tf-next>Continue <span class="arrow">&rarr;</span></button><button class="tf-back" type="button" data-tf-back>&larr; Back</button></div>
+      </div>
+
+      <div class="tf-step" data-step="3">
+        <div class="tf-q">What's your phone number?</div>
+        <div class="tf-phone">
+          <select id="tfCC" aria-label="Country code">
+            <option selected>🇬🇧 +44</option>
+            <option>🇺🇸 +1</option>
+            <option>🇮🇹 +39</option>
+            <option>🇪🇸 +34</option>
+            <option>🇫🇷 +33</option>
+            <option>🇩🇪 +49</option>
+            <option>🇵🇹 +351</option>
+            <option>🇮🇪 +353</option>
+            <option>🇳🇱 +31</option>
+            <option>🇧🇪 +32</option>
+            <option>🇨🇭 +41</option>
+            <option>🇦🇹 +43</option>
+            <option>🇸🇪 +46</option>
+            <option>🇳🇴 +47</option>
+            <option>🇩🇰 +45</option>
+            <option>🇫🇮 +358</option>
+            <option>🇵🇱 +48</option>
+            <option>🇬🇷 +30</option>
+            <option>🇹🇷 +90</option>
+            <option>🇺🇦 +380</option>
+            <option>🇦🇺 +61</option>
+            <option>🇳🇿 +64</option>
+            <option>🇿🇦 +27</option>
+            <option>🇳🇬 +234</option>
+            <option>🇰🇪 +254</option>
+            <option>🇯🇲 +1876</option>
+            <option>🇧🇷 +55</option>
+            <option>🇲🇽 +52</option>
+            <option>🇦🇷 +54</option>
+            <option>🇮🇳 +91</option>
+            <option>🇯🇵 +81</option>
+            <option>🇦🇪 +971</option>
+          </select>
+          <input class="tf-in" type="tel" name="phone" placeholder="Your number" autocomplete="tel">
         </div>
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="btn btn-accent" type="button" data-tf-next>Continue <span class="arrow">&rarr;</span></button><button class="tf-back" type="button" data-tf-back>&larr; Back</button></div>
+      </div>
 
-        <!-- Step 2: Email -->
-        <div class="tf-step" data-index="1">
-          <div class="tf-q">What's your email?</div>
-          <input class="tf-input" type="email" id="tf-email" placeholder="your@email.com" autocomplete="email">
-          <span class="tf-error" id="err-email"></span>
-          <button class="tf-continue" onclick="tfNext()">Continue →</button>
-          <button class="tf-back" onclick="tfPrev()">← Back</button>
+      <div class="tf-step" data-step="4">
+        <div class="tf-q">What sport do you compete in?</div>
+        <input class="tf-in" type="text" name="sport" placeholder="e.g. 400m, football, archery">
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="btn btn-accent" type="button" data-tf-next>Continue <span class="arrow">&rarr;</span></button><button class="tf-back" type="button" data-tf-back>&larr; Back</button></div>
+      </div>
+
+      <div class="tf-step" data-step="5">
+        <div class="tf-q">What's your biggest mental challenge in competition right now?</div>
+        <div class="tf-opts">
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Negative self-talk / inner critic"><span class="key">A</span>Negative self-talk / inner critic</button>
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Confidence &amp; self-doubt"><span class="key">B</span>Confidence &amp; self-doubt</button>
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Handling pressure &amp; nerves"><span class="key">C</span>Handling pressure &amp; nerves</button>
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Staying focused"><span class="key">D</span>Staying focused</button>
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Motivation &amp; consistency"><span class="key">E</span>Motivation &amp; consistency</button>
+          <button class="tf-opt" type="button" data-key="challenge" data-val="Freezing or overthinking"><span class="key">F</span>Freezing or overthinking</button>
         </div>
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="tf-back" type="button" data-tf-back>&larr; Back</button></div>
+      </div>
 
-        <!-- Step 3: Phone -->
-        <div class="tf-step" data-index="2">
-          <div class="tf-q">What's your phone number? 📱</div>
-          <div class="tf-phone-row">
-            <select class="tf-phone-prefix" id="tf-prefix">
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+39">🇮🇹 +39</option>
-              <option value="+34">🇪🇸 +34</option>
-              <option value="+33">🇫🇷 +33</option>
-              <option value="+49">🇩🇪 +49</option>
-              <option value="+351">🇵🇹 +351</option>
-              <option value="+353">🇮🇪 +353</option>
-              <option value="+31">🇳🇱 +31</option>
-              <option value="+32">🇧🇪 +32</option>
-              <option value="+41">🇨🇭 +41</option>
-              <option value="+43">🇦🇹 +43</option>
-              <option value="+46">🇸🇪 +46</option>
-              <option value="+47">🇳🇴 +47</option>
-              <option value="+45">🇩🇰 +45</option>
-              <option value="+358">🇫🇮 +358</option>
-              <option value="+48">🇵🇱 +48</option>
-              <option value="+30">🇬🇷 +30</option>
-              <option value="+90">🇹🇷 +90</option>
-              <option value="+380">🇺🇦 +380</option>
-              <option value="+61">🇦🇺 +61</option>
-              <option value="+64">🇳🇿 +64</option>
-              <option value="+27">🇿🇦 +27</option>
-              <option value="+234">🇳🇬 +234</option>
-              <option value="+254">🇰🇪 +254</option>
-              <option value="+1876">🇯🇲 +1876</option>
-              <option value="+55">🇧🇷 +55</option>
-              <option value="+52">🇲🇽 +52</option>
-              <option value="+54">🇦🇷 +54</option>
-              <option value="+91">🇮🇳 +91</option>
-              <option value="+81">🇯🇵 +81</option>
-              <option value="+971">🇦🇪 +971</option>
-            </select>
-            <input class="tf-phone-number" type="tel" id="tf-phone" placeholder="Your phone number">
-          </div>
-          <span class="tf-error" id="err-phone"></span>
-          <button class="tf-continue" onclick="tfNext()">Continue →</button>
-          <button class="tf-back" onclick="tfPrev()">← Back</button>
+      <div class="tf-step" data-step="6">
+        <div class="tf-q">How long has this been holding you back?</div>
+        <div class="tf-opts">
+          <button class="tf-opt" type="button" data-key="duration" data-val="A few months"><span class="key">A</span>A few months</button>
+          <button class="tf-opt" type="button" data-key="duration" data-val="Around 6 months"><span class="key">B</span>Around 6 months</button>
+          <button class="tf-opt" type="button" data-key="duration" data-val="1–2 years"><span class="key">C</span>1–2 years</button>
+          <button class="tf-opt" type="button" data-key="duration" data-val="It's always been an issue"><span class="key">D</span>It's always been an issue</button>
         </div>
-
-        <!-- Step 4: Sport -->
-        <div class="tf-step" data-index="3">
-          <div class="tf-q">What sport do you compete in?</div>
-          <input class="tf-input" type="text" id="tf-sport" placeholder="e.g. 100m sprinting, powerlifting, swimming…">
-          <span class="tf-error" id="err-sport"></span>
-          <button class="tf-continue" onclick="tfNext()">Continue →</button>
-          <button class="tf-back" onclick="tfPrev()">← Back</button>
-        </div>
-
-        <!-- Step 5: Mental challenge -->
-        <div class="tf-step" data-index="4">
-          <div class="tf-q">What's your biggest mental challenge in competition right now?</div>
-          <div class="tf-opts">
-            <div class="tf-opt" data-val="Negative self-talk / inner critic" onclick="tfPick(this,4)"><span class="tf-key">A</span> Negative self-talk / inner critic</div>
-            <div class="tf-opt" data-val="Confidence & self-doubt" onclick="tfPick(this,4)"><span class="tf-key">B</span> Confidence & self-doubt</div>
-            <div class="tf-opt" data-val="Handling pressure & nerves" onclick="tfPick(this,4)"><span class="tf-key">C</span> Handling pressure & nerves</div>
-            <div class="tf-opt" data-val="Staying focused / switching off distractions" onclick="tfPick(this,4)"><span class="tf-key">D</span> Staying focused</div>
-            <div class="tf-opt" data-val="Motivation & consistency" onclick="tfPick(this,4)"><span class="tf-key">E</span> Motivation & consistency</div>
-            <div class="tf-opt" data-val="Freezing or overthinking in key moments" onclick="tfPick(this,4)"><span class="tf-key">F</span> Freezing or overthinking</div>
-          </div>
-          <button class="tf-back" onclick="tfPrev()" style="margin-top:14px">← Back</button>
-        </div>
-
-        <!-- Step 6: Duration → auto-submit on pick -->
-        <div class="tf-step" data-index="5">
-          <div class="tf-q">How long has this been holding you back?</div>
-          <div class="tf-opts">
-            <div class="tf-opt" data-val="A few months" onclick="tfPickLast(this)"><span class="tf-key">A</span> A few months</div>
-            <div class="tf-opt" data-val="Around 6 months" onclick="tfPickLast(this)"><span class="tf-key">B</span> Around 6 months</div>
-            <div class="tf-opt" data-val="1–2 years" onclick="tfPickLast(this)"><span class="tf-key">C</span> 1–2 years</div>
-            <div class="tf-opt" data-val="It's always been an issue" onclick="tfPickLast(this)"><span class="tf-key">D</span> It's always been an issue</div>
-          </div>
-          <button class="tf-submit" id="tf-submit-btn" style="display:none" onclick="tfSubmit()">Book My Free Discovery Call →</button>
-          <button class="tf-back" onclick="tfPrev()" style="margin-top:10px">← Back</button>
-        </div>
-
-      </div><!-- end tf-steps -->
-    </div><!-- end typeform-wrap -->
-
+        <p class="tf-err"></p>
+        <div class="tf-nav"><button class="btn btn-accent btn-lg" type="button" id="tfSubmit">Book my call <span class="arrow">&rarr;</span></button><button class="tf-back" type="button" data-tf-back>&larr; Back</button></div>
+      </div>
+    </div>
+    <div class="tf-assure">
+      <span>Completely confidential — only Iaia sees your answers</span>
+      <span>Under 2 minutes</span>
+    </div>
   </div>
 </section>
 
-<!-- ═══ FINAL CTA ══════════════════════════════════════ -->
-<section class="final-cta">
-  <span class="section-tag">Ready?</span>
-  <h2 class="final-cta-title">Your mind is already your biggest competitive advantage.<br>You just haven't trained it yet.</h2>
-  <p class="final-cta-sub">The 8D Performance Assessment is free. It takes ~30 minutes. It might change how you compete forever.</p>
-  <a href="#qualify" class="btn-gold-lg" style="margin:0 auto">Take the 8D Assessment →</a>
-  <p class="final-note">Neuroscience-backed &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; Used by athletes at national & international level</p>
+<section class="lp-section" style="padding-top:0">
+  <div class="lp-shell">
+    <div class="lp-final">
+      <span class="eyebrow">Ready?</span>
+      <h2>Your mind is already your biggest advantage. You just haven't <span class="em">trained</span> it yet.</h2>
+      <p>The 8D Performance Assessment is free. It takes about 30 minutes. It might change how you compete forever.</p>
+      <a class="btn btn-accent btn-lg" href="#qualify">Start the 8D assessment <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
 </section>
 
-<!-- ═══ FOOTER ═════════════════════════════════════════ -->
-<footer>
-  <div class="footer-brand">
-    <img src="logo-brain.png" alt="BPC">
-    <span class="footer-brand-name">Brain Performance Coaching</span>
+</main>
+
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+    <div class="lp-footer-brand"><img src="logo-brain.png" alt="" width="34" height="30"><strong>Brain Performance Coaching</strong></div>
+    <div class="lp-footer-links">
+      <a href="mailto:info@brainperformancecoaching.com">info@brainperformancecoaching.com</a>
+      <a href="https://www.instagram.com/iaia_braincoach" target="_blank" rel="noreferrer">@iaia_braincoach</a>
+      <a href="https://brainperformancecoaching.com" target="_blank" rel="noreferrer">Main site &#8599;</a>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="mailto:info@brainperformancecoaching.com" class="footer-link">info@brainperformancecoaching.com</a>
-    <a href="https://www.instagram.com/iaia_braincoach" class="footer-link" target="_blank">@iaia_braincoach</a>
-  </div>
-  <div class="footer-right">
-    <p class="footer-copy">© 2026 Brain Performance Coaching Ltd</p>
-    <p class="footer-disclaimer">This assessment is not a clinical diagnostic tool. Results are used solely for coaching purposes.</p>
-  </div>
+  <p class="lp-legal">&copy; 2026 Brain Performance Coaching Ltd. This assessment is not a clinical diagnostic tool. Results are used solely for coaching purposes.</p>
 </footer>
 
-<script>
-/* ─── TESTIMONIAL DATA ────────────────────────────── */
-const athletes = {
-  alwaaz: {
-    name: 'Alwaaz', sport: 'Sprinting', result: '3 PBs in one indoor season', img: 'athletes/alwaaz.jpg', initial: 'A',
-    text: `<p>"My name is Alwaaz and I'm a sprinter. I started this programme because I was very scared of getting injured again — I'd had multiple hamstring tears and that fear was constantly hampering my performance.</p>
-    <p>The biggest change is how I speak to myself. I've learned to talk to myself in a much more positive way and reframe my thoughts. My confidence has reached an all-time high. I'm no longer scared of getting injured — I step onto the track with confidence, and I've hit three PBs this indoor season.</p>
-    <p>The tool that made the biggest difference was learning to properly visualise. When you use it before competition, it reduces pre-race nerves and makes you feel ready to perform.</p>
-    <p>If you're an athlete wondering whether to make the investment — trust me, you'll thank yourself for it."</p>`
-  },
-  aaliyah: {
-    name: 'Aaliyah', sport: '100m / 200m Sprinting', result: '2nd place internationally · Broke 24s in 200m', img: 'athletes/aaliyah.jpg', initial: 'A',
-    text: `<p>"My name is Aaliyah, and I'm a track athlete focused on the 100m. I was struggling with self-doubt and negative thoughts — my main goal was to rebuild my confidence in the sport I love.</p>
-    <p>After one session focused on how thoughts impact performance, I competed in my first international meet in Belgium. On race day I was fully locked in — positive self-talk, 'You've got this', 'You know what to do'. I finished 2nd in the 100m final with a PB, and broke 24 seconds in the 200m for the first time. I was so proud.</p>
-    <p>Looking back, there was not a single negative thought in my head that day. If you're considering brain coaching — give it a try. Confidence doesn't come overnight, but with the right guidance, it does come."</p>`
-  },
-  jennifer: {
-    name: 'Jennifer Eduwu', sport: 'Sprinting · National Level', result: '9.3s → 9.1s · Confidence 9/10', img: 'athletes/jennifer.jpg', initial: 'J',
-    text: `<p>"My name is Jennifer Eduwu, I'm a national-level athlete specialising in athletics. My main aim was to develop coping mechanisms for competition anxiety and build a more positive mindset overall.</p>
-    <p>One of the most powerful tools was the 'results cycle' — how negative thoughts lead to negative outcomes, and how flipping this creates the exact opposite. I also realised I'd been unknowingly setting mental limits for myself.</p>
-    <p>The week before one of our sessions, I ran 9.3s in training. After applying what I'd learnt mentally, I set a target of 9.2s — and ended up running 9.1s. That was a huge win for me.</p>
-    <p>On a scale of 1 to 10, I'd say I'm at a 9 in terms of confidence in achieving my dreams. I'd absolutely recommend this programme to any athlete looking to grow mentally, emotionally, and physically."</p>`
-  },
-  jessica: {
-    name: 'Jessica Calderbank', sport: 'Butterfly Swimming · Jamaican National', result: 'Fastest training times ever · Confidence 9/10', img: 'athletes/jessica.jpg', initial: 'J',
-    text: `<p>"My name is Jessica Calderbank and I'm a Jamaican National Butterfly Swimmer. I joined because I wanted to better my mentality — to be more controlled, self-aware, and build a stronger mindset overall.</p>
-    <p>Before starting, I struggled to stay focused after a bad swim. Visualisation was something I always found difficult, and confidence was a big challenge.</p>
-    <p>Since working with Iaia, I've been hitting some of the fastest times I've ever done in training. The visualisation and journaling are now part of my daily routine and have helped me handle challenges in a much better way.</p>
-    <p>Iaia's approach was practical and structured — which worked really well for me. Right now I'd rate my confidence at a 9 out of 10. I've got real proof it works."</p>`
-  },
-  isaac: {
-    name: 'Isaac', sport: '400m · National Level', result: 'Confidence 4/10 → 8/10', img: 'athletes/isaac.jpg', initial: 'I',
-    text: `<p>"I'm Isaac, a 400m athlete competing nationally. I'd been struggling mentally — self-doubt, anxiety, and fear of getting injured again. My goal was to run without fear and trust my body again.</p>
-    <p>From the first session I knew I was in the right place. A visualisation exercise where I imagined performing a movement better — and then actually did it better in real life — felt like magic. It showed me how powerful the mind really is.</p>
-    <p>Since then I've learned to trust my body, stop overthinking, and enjoy training and racing again. When I started, my confidence was 4/10. Now I'm at 8. This programme has helped me rebuild from the inside out. For the first time in a long time, I feel back in control — and excited for what's ahead."</p>`
-  },
-  jenna: {
-    name: 'Jenna Blundell', sport: '100m Hurdles', result: 'Confidence & visualisation transformed', img: 'athletes/jenna.jpg', initial: 'J',
-    text: `<p>"My name is Jenna and I compete in 100-metre hurdles. I started because I'd been overthinking a lot — during races I wasn't really present in my body or in the moment.</p>
-    <p>The biggest change is in my confidence — in my ability and in what I can achieve. I'm much less focused on external noise: expectations, pressure, the idea that you have to achieve certain things early in your career. Instead I focus on the process and find more internal reasons to push myself.</p>
-    <p>The tool that made the biggest difference was visualisation. I never knew how to get the full benefit from it — through the programme I learned how to properly immerse myself and apply it consistently in competitions.</p>
-    <p>One thing that really surprised me is how simple training your brain can actually be. It doesn't have to be complicated — it's about learning tools you might not even realise you already have access to. That's what I enjoyed most."</p>`
-  },
-  tobias: {
-    name: 'Tobias Cherry', sport: 'High Jump · English Schools National Champion · 2.10m PB', result: 'Confidence 10/10', img: 'athletes/tobias.jpg', initial: 'T',
-    text: `<p>"My name is Tobias Cherry. I'm a high jumper, 20 years old, studying at the University of Birmingham. I've competed for England, I was an English Schools National Champion, and my personal best is 2.10m.</p>
-    <p>At the beginning, my main goals were around my mentality in competition — both before and during. I wanted to prepare mentally in a better way and, most importantly, maintain that mindset throughout. Before starting, one of my biggest challenges was losing my head during competitions — doubt would creep in and my confidence would drop when I should have been executing.</p>
-    <p>Since starting, I feel much more focused in training and more connected to my purpose. I'm much better at reframing negative thoughts and not letting them take over. What I appreciated most was how easy Iaia is to talk to — she's understanding and adapts based on how you're feeling.</p>
-    <p>Right now I'd rate my confidence at a 10 out of 10. I have the tools. I see no reason why I can't achieve my goals."</p>`
-  },
-  hugo: {
-    name: 'Hugo', sport: '200m / 400m · Montreal', result: 'Multiple PBs in training & competition', img: 'athletes/hugo.jpg', initial: 'H',
-    text: `<p>"My name is Hugo, I am a track and field athlete from Montreal specialising in the 200m and 400m sprints. I'm currently working towards competing at provincial and national level, with the long-term goal of breaking masters records once I reach the 30+ category.</p>
-    <p>Before working with Yaya, I struggled a lot with anxiety before races and training sessions. I would get frustrated with my results or times, and it often led to negative self-talk and doubt. I wanted to learn how to regulate my emotions better and stop letting anxiety control my performances.</p>
-    <p>The biggest change since starting one-on-one coaching has been learning how to stay grounded and connected during both training and competition. Yaya helped me visualise how I want to feel and who I want my future self to become. That completely changed my mindset. Over the past few months, I've achieved multiple personal bests in training and competition, especially in longer events that I previously struggled with.</p>
-    <p>Two tools truly changed my life: journaling every morning and breathing techniques. Journaling is now completely non-negotiable for me. Combined with the breathing exercises, it has reduced my anxiety not only in sport, but in everyday life as well.</p>
-    <p>What stood out most about Yaya's coaching was how genuine and adaptive her approach is. Nothing felt copied and pasted or like generic motivational advice. She really took the time to understand my background, my emotions, and my specific situation. The coaching feels deeply personal and tailored to the individual.</p>
-    <p>I would recommend this programme to any athlete — or honestly anyone — who wants to achieve something meaningful while becoming more self-aware."</p>`
-  },
-  ray: {
-    name: 'Ray Lenore', sport: '800m Track & Field', result: '7th BUCS Indoors · 1:49 800m', img: 'athletes/ray.jpg', initial: 'R',
-    text: `<p>"My name is Ray Lenore, I am an 800-metre track and field athlete. I'm currently a 1:49 800m runner, and this year I finished 7th at the BUCS Indoor Championships.</p>
-    <p>I started this programme because I realised that, while we spend so much time training the body physically, there's often a huge part of the mental side that gets left untouched. Before working with Yaya, I felt like my emotional state before races or sessions depended too much on luck. I wanted techniques and strategies that would help me regulate my emotions consistently and make my mindset more reliable day to day.</p>
-    <p>The biggest change since starting the programme is that I no longer feel controlled by chance emotionally. In training and racing, I now know when to relax and when to push. I trust myself much more. Training has become far more enjoyable because I feel in control rather than reactive.</p>
-    <p>That shift led to a really important 10-day period where I qualified for my university's BUCS team and then went on to finish seventh at BUCS Indoors. That felt like a massive step forward and a strong foundation for what's next in my career.</p>
-    <p>The biggest tool for me was visualisation. By rehearsing situations mentally beforehand, I already knew how I wanted to think and feel when those moments arrived. It felt almost automatic, like the response had already been decided for me. That gave me a huge sense of comfort and confidence when it came time to perform.</p>
-    <p>I would recommend this programme to any athlete because performance starts with the mind. This programme helped me become not only a better athlete, but also a more well-rounded person."</p>`
-  },
-  hakan: {
-    name: 'Hakan Bello', sport: '400m · National & International', result: '48.3s → 47.5s · British Indoor Final', img: 'athletes/hakan.jpg', initial: 'H',
-    text: `<p>"My name is Hakan Bello, I am a 400-metre sprinter competing at both national and international level. I compete in the British League, the Velocity Championships, and the British Athletics Championships.</p>
-    <p>I started this programme because, although I had structure in every physical aspect of my training, I realised there was a gap when it came to the mental side. My gym work, sprint sessions, and preparation were all planned out, but I had never done any formal mind training or mental coaching.</p>
-    <p>At the beginning, the goal was to have a strong indoor season, qualify for major competitions, and perform well at the Portuguese Championships and British Championships. What surprised me most was how much more I achieved than I originally expected. I ended up making a British indoor final — something that genuinely was not even in my sights before starting this coaching.</p>
-    <p>The biggest change for me has been learning how to visualise effectively. Before training sessions or races, I can now visualise exactly how I want to execute each rep or race. It removes nervousness and fear because mentally I already believe I can do it before stepping onto the track.</p>
-    <p>The results reflected that shift immediately. I came into the indoor season with a personal best of 48.3 seconds and improved to 47.5 seconds. Dropping eight tenths of a second in the 400m was a huge breakthrough for me.</p>
-    <p>Another major part of the programme was learning about flow state training. I now understand how to balance challenge and skill level properly, which has helped me stop placing limitations on myself. I would honestly describe this programme as life-changing."</p>`
-  },
-  derek: {
-    name: 'Derek Kinlook', sport: 'Sprinting · GB', result: 'Confidence 8/10 · GB Sprinter', img: 'athletes/derek.jpg', initial: 'D',
-    text: `<p>"My name is Derek Kinlook, and I'm a GB sprinter. I joined this brain coaching programme because I'd always heard that sport is 90% mental, but I'd never really trained that part of myself. I usually went into competitions without thinking much about the mental side, so I wanted to see what would happen if I started working on it.</p>
-    <p>At the start, my main goal was simply to get to know myself better — to understand how my mind works, what holds me back, and how I could use that awareness to elevate my training and competition mindset.</p>
-    <p>One of the most powerful tools I discovered was visualisation. It helped me identify what was going wrong and gave me a clear way to fix it. I'd visualise specific movements, focus on what I wanted to improve, and over time I started to notice changes — small at first, but then more consistent.</p>
-    <p>Since starting the programme, I've noticed a real shift in my mindset and performance. I'm more focused and calm, especially during races. In sprinting, staying relaxed and fluid is everything — and by being mentally centred, my performance naturally got better.</p>
-    <p>What I really appreciated about Iaia's approach was how professional and personal it felt at the same time. She checked in after training, asked how things were going, and genuinely cared about my progress. That kind of communication made a huge difference.</p>
-    <p>Now, I'd rate my confidence at a solid 8 out of 10. I'd definitely recommend this programme to any athlete. Too many people focus only on physical training and neglect the mental side, even though it's what truly separates good performances from great ones."</p>`
-  },
-  hagen: {
-    name: 'Hagen', sport: '100m / 200m Sprinting', result: 'Confidence 3/10 → 9/10', img: 'athletes/hagen.jpg', initial: 'H',
-    text: `<p>"My name is Hagen, I am a 100m and 200m sprinter. I joined this programme because I wanted to build the skill of confidence in high pressure environments.</p>
-    <p>At first, I had my doubts — I didn't know if it would make a difference at all, but regardless I still gave it a go and it has been an exciting experience since.</p>
-    <p>Before the programme I had big goals but didn't have the full belief that I would achieve them. But now I have shifted completely and have the full trust in my abilities and my faith to realise my dreams.</p>
-    <p>The visualisation was really powerful. I was able to see my ideal self and how he would react to challenges and achieving the goals I had set out — seeing that vividly in my mind, I was able to fully realise that I can become that person if I put into practice the skills I have been learning.</p>
-    <p>I have noticed my mental clarity and confidence has skyrocketed within this short period. I was rated a 3/10 before the programme but now I can confidently say I'm seeing 9/10 consistently on a daily basis — which is amazing.</p>
-    <p>The coach was amazing. I was able to open up freely and the conversations were professional yet comforting, as if I was talking to a friend. She personalised her approach in such a way to fulfil my needs. I would 100% recommend her to all athletes — brain training is a must and should not be neglected."</p>`
-  },
-  kieran: {
-    name: 'Kieran Shah', sport: 'Sprinting · National Level', result: 'Focus & confidence rebuilt after injury', img: 'athletes/kieran.jpg', initial: 'K',
-    text: `<p>"My name is Kieran Shah, and I'm a national-level sprinter. I joined the programme because I'd had some injuries over time, and I wanted to regain the motivation and focus to bring myself back to where I was a couple of years ago. I came in very open-minded, wanting to understand myself better as an athlete.</p>
-    <p>Throughout the sessions, several exercises had a real impact, but the one that stood out most was the visualisation work — especially the one about quieting that inner noise. I used to have a lot of negative thoughts and self-criticism, and learning how to manage that made a huge difference.</p>
-    <p>Since starting, I've noticed that I'm now able to switch on and off that zone of focus when I need it. I've found a kind of sweet spot where I can tap in and get into the right state for training and performance.</p>
-    <p>I definitely felt supported and understood throughout the process. It was all very transparent, and I felt comfortable talking about how I was feeling and what was going on. That openness made it easy to be honest and get the most out of it.</p>
-    <p>What I appreciated most about Iaia was the personal touch. She really gives her all and makes it feel completely tailored to you, rather than a generic programme.</p>
-    <p>I'd 100% recommend this programme to other athletes. A lot of people don't really understand how their mind works. They think it's just about physical talent, but athletics is an incredibly mental sport. If you can strengthen that side, it changes everything."</p>`
-  },
-  eli: {
-    name: 'Eli', sport: '100m / 200m · Welsh International', result: '2 PBs in Cardiff · Fastest season ever', img: 'athletes/eli.jpg', initial: 'E',
-    text: `<p>"I'm Eli, a Welsh international 100m and 200m sprinter. When I started this programme, my main goals were to build confidence, improve my focus, and respond better to setbacks in competition. I've studied sports psychology myself, but applying it on my own was always tough.</p>
-    <p>I wanted someone to guide me, challenge me, and help me put everything into practice — and that's exactly what I got with Yaya. The biggest impact for me came from visualisations and performance mapping. Learning to see and feel the athlete I want to become completely changed how I approached training and racing.</p>
-    <p>I used to let negative thoughts take over after poor performances, but this season I've been more consistent, calmer, and at my fastest. Even when races didn't go to plan, I bounced back with resilience.</p>
-    <p>One highlight was at Cardiff, shortly after the World Championships. I'd been ill and didn't expect much, but I used the visualisations we'd practised, went into a race completely relaxed, and came away with two PBs in the 100m and 200m. That gave me a huge boost of confidence and showed me how powerful these tools really are.</p>
-    <p>What I valued most about Yaya's approach was how personal it felt. She gave me the space to speak openly, then helped me reflect and understand myself better. I'd absolutely recommend this programme to any athlete. Even if you think you've got everything covered, trust me — there's always another level to your mindset."</p>`
-  },
-  theo: {
-    name: 'Theo', sport: '100m / 200m · National Level', result: 'Sub-22s 200m · Hit national standards', img: 'athletes/theo.jpg', initial: 'T',
-    text: `<p>"I'm Theo, a 100m and 200m sprinter competing at national level. Every year I've been getting better, improving bit by bit. But this year, I knew I needed to go deeper if I wanted to reach that next level — not just physically, but mentally too.</p>
-    <p>At first, I was a bit hesitant to start the brain coaching programme. The mind wasn't something I'd really trained before. I always believed that if I just worked hard in training and pushed myself in the gym, the results would follow. But I've learned it's not always that simple.</p>
-    <p>The guided visualisations were a real turning point — it genuinely felt like I was running the race in my head before even stepping onto the track. Another big one was learning to run relaxed. The body tension drills helped me stop carrying stress in my body, and now I move smoother, more fluid.</p>
-    <p>The session that surprised me most was the focus drill. It made me realise how much I'd been distracted by others in races. Now I bring myself back every time. This is my race, my lane, my performance. That shift in focus has been massive.</p>
-    <p>Before, if I had a bad session or a poor race, I'd get properly frustrated. But now I'm able to reflect without spiralling — I look at what went well, what didn't, and what I can improve.</p>
-    <p>And the results speak for themselves. I finally broke 22 seconds in the 200m — a goal I've had since 2022. I was just a thousandth away from breaking 11 seconds in the 100m. I hit the standards for nationals. If you're an athlete thinking about this — do it. You'll unlock a side of yourself that's been waiting to come out."</p>`
-  },
-  constance: {
-    name: 'Constance', sport: 'Cross Country & Track · Injury Recovery', result: 'Mindset transformed through injury', img: 'athletes/constance.jpg', initial: 'C',
-    text: `<p>"I'm Constance, and I'm a competitive cross country and track runner who has been sidelined by a significant injury for far longer than I expected. I joined Iaia's programme because I was really struggling to stay mentally strong and hold onto hope of returning to my sport.</p>
-    <p>I'd never tried mental coaching before, and honestly, I wasn't sure it would work for me. But as I was really struggling with my injury, I decided to give it a try.</p>
-    <p>Working with Iaia, I learned powerful techniques that transformed how I handle my injury and my mindset. One of the most impactful was the mental reset drill she taught me. I started using it before physio appointments, training attempts, or whenever negative thoughts crept in during the day. Once I got the hang of it, it became a game-changer for refocusing my mind and letting go of doubt.</p>
-    <p>We also worked on visualisation, positive self-talk and journaling, which helped me set clear, realistic goals for my future and map out how to get there. Iaia's calm and supportive presence made me feel relaxed during our sessions — that sense of ease allowed me to open up fully about my struggles.</p>
-    <p>My injury hasn't healed yet, but I now feel in a much stronger place to tackle my recovery and return to running when my body is ready. This whole experience has improved my focus, motivation and confidence. I feel excited and optimistic about my future.</p>
-    <p>I'd highly recommend Iaia's programme to any athlete looking to boost their mental game. This experience taught me that training your brain is just as crucial as training your body."</p>`
-  },
-  ollie: {
-    name: 'Ollie', sport: '400m · Sheffield & Ireland', result: 'PB +1s · Semi-finals at Nationals · Confidence 9.5/10', img: 'athletes/ollie.jpg', initial: 'O',
-    text: `<p>"My name is Ollie, a 400m athlete racing nationally for the University of Sheffield and City of Sheffield, as well as in Ireland. I reached out to Yaya on Instagram after seeing her page. I'd always known the mental side was my biggest weakness, so I was immediately interested. My goal was simple: to manage my mindset better in races, not get so stressed or overwhelmed, and develop real techniques I could actually use.</p>
-    <p>The first time we did a breathing exercise, it was a proper wow moment. Straight away, I knew this was something I could use in a race environment. The control zone work was another game-changer — once I put it into practice, I couldn't believe how much calmer and more focused I felt in races.</p>
-    <p>Almost immediately, I started seeing results. I PB'd by over a second in the 400m and qualified for the semi-finals at nationals — something I honestly didn't believe I could do. It gave me confidence, belief, and the tools to perform at the level I should have been performing at all along.</p>
-    <p>It's not just my times that have improved — I actually enjoy athletics more now. I don't get overwhelmed like I used to, I'm more consistent, and I'm able to regulate myself in a way that just wasn't possible before. And it's gone beyond athletics. I use the same mindset skills to handle stress at work and in life.</p>
-    <p>When I started, my short-term goal was to just feel better on the mental side. I've smashed that. My confidence is now a 9.5 out of 10. What used to hold me back mentally is now becoming one of my strengths.</p>
-    <p>Would I recommend this programme? A thousand percent, yes. In just a couple of months, I feel like a completely different athlete. If you're struggling with the mental side of athletics, just give it a go — even try the intro call. You'll see the improvements almost straight away."</p>`
-  },
-  sulaiman: {
-    name: 'Sulaiman Ouiles', sport: 'Decathlon · International', result: 'Visualisation & mindset optimised', img: 'athletes/sulaiman.jpg', initial: 'S',
-    text: `<p>"My name is Sulaiman Ouiles, I participate in the decathlon, and I have represented my country in my sport. I looked to join this programme as a way to optimise my performance — I felt any support I could get was good, however I was confident in my psychological approach to competition and wasn't sure if there would be much benefit.</p>
-    <p>Through the sessions I learnt how to improve my visualisation to make it far more effective, encompassing desired feelings and sensations. I also learnt two ways to clear my mind: one being before bed using a journal, and the other an anchor technique that could be used in training or competition. This anchor technique really helped me restructure how I dealt with failure and how I now see it as a positive thing.</p>
-    <p>I have already noticed quickly that my thought process is different when I make mistakes now. I look for things I did right before things I did wrong, and try to recreate those again next time. This makes me feel a lot more positive about my experience.</p>
-    <p>I found the coach really helpful and positive during our sessions. Especially when I struggled to find a positive side, she was supportive and helped me to find something myself.</p>
-    <p>I think if you're like me and you often struggle to see the bright side to a situation, she can help you a lot. But also, if you don't feel like there's something you need but you want to improve your competitive nature — this is a great programme for you."</p>`
-  }
-};
-
-/* ─── MODAL ──────────────────────────────────────────── */
-function openModal(id) {
-  const a = athletes[id];
-  if (!a) return;
-  const avatar = document.getElementById('modal-avatar');
-  avatar.innerHTML = `<img src="${a.img}" alt="${a.name}" onerror="this.parentElement.textContent='${a.initial}'">`;
-  document.getElementById('modal-name').textContent = a.name;
-  document.getElementById('modal-sport').textContent = a.sport;
-  document.getElementById('modal-result').textContent = a.result;
-  document.getElementById('modal-text').innerHTML = a.text;
-  const modal = document.getElementById('modal');
-  modal.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('modal').classList.remove('is-open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-/* ─── FORM (6 steps) ─────────────────────────────────── */
-let tfCurrent = 0;
-const TF_TOTAL = 6;
-const tfData = {};
-
-function tfUpdateProgress() {
-  const pct = ((tfCurrent + 1) / TF_TOTAL) * 100;
-  document.getElementById('tf-fill').style.width = pct + '%';
-  document.getElementById('tf-count').textContent = `${tfCurrent + 1} / ${TF_TOTAL}`;
-}
-
-function tfGoTo(index) {
-  const steps = document.querySelectorAll('.tf-step');
-  const from = steps[tfCurrent];
-  const to = steps[index];
-  const forward = index > tfCurrent;
-
-  from.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
-  from.style.opacity = '0';
-  from.style.transform = forward ? 'translateX(-40px)' : 'translateX(40px)';
-  from.style.pointerEvents = 'none';
-
-  setTimeout(() => {
-    from.classList.remove('is-active');
-    from.style.cssText = '';
-    to.style.opacity = '0';
-    to.style.transform = forward ? 'translateX(40px)' : 'translateX(-40px)';
-    to.style.transition = 'none';
-    to.classList.add('is-active');
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        to.style.transition = 'opacity 0.32s ease, transform 0.32s ease';
-        to.style.opacity = '1';
-        to.style.transform = 'translateX(0)';
-        to.style.pointerEvents = 'all';
-      });
-    });
-
-    tfCurrent = index;
-    tfUpdateProgress();
-
-    const inp = to.querySelector('input');
-    if (inp) setTimeout(() => inp.focus(), 80);
-  }, 280);
-}
-
-function tfClearError(id) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = '';
-}
-function tfShowError(id, msg) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = msg;
-}
-
-function isValidEmail(v) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-}
-function isValidPhone(v) {
-  const digits = v.replace(/[\s\-\(\)]/g, '');
-  return /^\d{6,15}$/.test(digits);
-}
-
-function tfNext() {
-  if (tfCurrent === 0) {
-    const v = document.getElementById('tf-name').value.trim();
-    if (!v) { document.getElementById('tf-name').classList.add('is-invalid'); tfShowError('err-name', 'Please enter your name.'); document.getElementById('tf-name').focus(); return; }
-    document.getElementById('tf-name').classList.remove('is-invalid'); tfClearError('err-name');
-    tfData.name = v;
-  }
-  if (tfCurrent === 1) {
-    const v = document.getElementById('tf-email').value.trim();
-    if (!v) { document.getElementById('tf-email').classList.add('is-invalid'); tfShowError('err-email', 'Please enter your email.'); document.getElementById('tf-email').focus(); return; }
-    if (!isValidEmail(v)) { document.getElementById('tf-email').classList.add('is-invalid'); tfShowError('err-email', 'Please enter a valid email address.'); document.getElementById('tf-email').focus(); return; }
-    document.getElementById('tf-email').classList.remove('is-invalid'); tfClearError('err-email');
-    tfData.email = v;
-  }
-  if (tfCurrent === 2) {
-    const v = document.getElementById('tf-phone').value.trim();
-    if (!v) { document.getElementById('tf-phone').classList.add('is-invalid'); tfShowError('err-phone', 'Please enter your phone number.'); document.getElementById('tf-phone').focus(); return; }
-    if (!isValidPhone(v)) { document.getElementById('tf-phone').classList.add('is-invalid'); tfShowError('err-phone', 'Please enter a valid phone number.'); document.getElementById('tf-phone').focus(); return; }
-    document.getElementById('tf-phone').classList.remove('is-invalid'); tfClearError('err-phone');
-    tfData.phone = document.getElementById('tf-prefix').value + ' ' + v;
-  }
-  if (tfCurrent === 3) {
-    const v = document.getElementById('tf-sport').value.trim();
-    if (!v) { document.getElementById('tf-sport').classList.add('is-invalid'); tfShowError('err-sport', 'Please tell us your sport.'); document.getElementById('tf-sport').focus(); return; }
-    document.getElementById('tf-sport').classList.remove('is-invalid'); tfClearError('err-sport');
-    tfData.sport = v;
-  }
-  if (tfCurrent < TF_TOTAL - 1) tfGoTo(tfCurrent + 1);
-}
-
-function tfPrev() {
-  if (tfCurrent > 0) tfGoTo(tfCurrent - 1);
-}
-
-function tfPick(el, stepIndex) {
-  el.closest('.tf-opts').querySelectorAll('.tf-opt').forEach(o => o.classList.remove('selected'));
-  el.classList.add('selected');
-  tfData['challenge'] = el.dataset.val;
-  setTimeout(() => { if (tfCurrent < TF_TOTAL - 1) tfGoTo(tfCurrent + 1); }, 320);
-}
-
-function tfPickLast(el) {
-  el.closest('.tf-opts').querySelectorAll('.tf-opt').forEach(o => o.classList.remove('selected'));
-  el.classList.add('selected');
-  tfData['duration'] = el.dataset.val;
-  setTimeout(() => {
-    document.getElementById('tf-submit-btn').style.display = 'block';
-    document.getElementById('tf-submit-btn').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 100);
-}
-
-// Enter key on text inputs
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.tf-input, .tf-phone-number').forEach(inp => {
-    inp.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); tfNext(); } });
-  });
-
-  // Inline email validation on blur
-  const emailInp = document.getElementById('tf-email');
-  if (emailInp) {
-    emailInp.addEventListener('blur', function() {
-      const v = this.value.trim();
-      if (v && !isValidEmail(v)) {
-        this.classList.add('is-invalid');
-        tfShowError('err-email', 'Please enter a valid email address.');
-      } else if (v) {
-        this.classList.remove('is-invalid');
-        tfClearError('err-email');
-      }
-    });
-  }
-
-  // Inline phone validation on blur
-  const phoneInp = document.getElementById('tf-phone');
-  if (phoneInp) {
-    phoneInp.addEventListener('blur', function() {
-      const v = this.value.trim();
-      if (v && !isValidPhone(v)) {
-        this.classList.add('is-invalid');
-        tfShowError('err-phone', 'Please enter a valid phone number.');
-      } else if (v) {
-        this.classList.remove('is-invalid');
-        tfClearError('err-phone');
-      }
-    });
-  }
-
-  // Return visit: skip form if already submitted
-  let completed = false;
-  try { completed = localStorage.getItem('bpc_rt_completed') === 'true'; } catch(e) {}
-  if (!completed) return;
-
-  let firstName = '';
-  try { firstName = (localStorage.getItem('bpc_rt_name') || '').split(' ')[0]; } catch(e) {}
-
-  const wrap = document.querySelector('.typeform-wrap');
-  if (!wrap) return;
-
-  wrap.innerHTML = `
-    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;min-height:320px;padding:32px 16px;gap:20px;">
-      <div style="font-size:44px;">✅</div>
-      <div style="font-size:19px;font-weight:700;color:var(--black);line-height:1.3;">
-        You're all set${firstName ? ', ' + firstName : ''}!
-      </div>
-      <div style="font-size:14px;color:var(--muted);line-height:1.75;max-width:340px;">
-        You've already completed the pre-assessment questions.<br>
-        Click below to go straight to the <strong style="color:var(--black);">8D Assessment</strong>.
-      </div>
-      <a href="./assessment.html"
-        style="display:inline-flex;align-items:center;gap:8px;
-          background:var(--gold);color:var(--black);
-          font-family:var(--font);font-size:15px;font-weight:700;
-          padding:15px 36px;border-radius:7px;text-decoration:none;
-          margin-top:4px;transition:opacity 0.2s;"
-        onmouseover="this.style.opacity='0.88'"
-        onmouseout="this.style.opacity='1'">
-        Go to the 8D Assessment →
-      </a>
-      <button
-        onclick="try{localStorage.removeItem('bpc_rt_completed');localStorage.removeItem('bpc_rt_name');}catch(e){}window.location.reload();"
-        style="background:none;border:none;font-family:var(--font);
-          font-size:12px;color:var(--muted);cursor:pointer;
-          text-decoration:underline;margin-top:2px;padding:4px;">
-        Not you? Fill the form again
-      </button>
-    </div>
-  `;
-});
-
-async function tfSubmit() {
-  const btn = document.getElementById('tf-submit-btn');
-  btn.textContent = 'Sending…';
-  btn.classList.add('tf-submitting');
-
-  const payload = {
-    name:      tfData.name || '',
-    email:     tfData.email || '',
-    phone:     tfData.phone || '',
-    sport:     tfData.sport || '',
-    challenge: tfData.challenge || '',
-    duration:  tfData.duration || '',
-    _subject:  'New lead — Brain Performance Coaching retargeting ad'
-  };
-
-  // 1. Notify Iaia via Formspree
-  try {
-    await fetch('https://formspree.io/f/xykvzwqd', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    if (typeof fbq !== 'undefined') { fbq('track', 'Lead'); }
-  } catch(e) { /* continue anyway */ }
-
-try {
-    localStorage.setItem('bpc_rt_completed', 'true');
-    localStorage.setItem('bpc_rt_name', tfData.name || '');
-  } catch(e) {}
-
-  // 3. Redirect to booking page (pass name/email for personalisation)
-  window.location.href = './thankyou.html?name=' + encodeURIComponent(tfData.name || '') + '&email=' + encodeURIComponent(tfData.email || '');
-}
-</script>
-
+<script src="js/landing.js"></script>
 </body>
 </html>
