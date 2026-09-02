@@ -1,25 +1,35 @@
-/* Traffic source: read UTMs on arrival, remember across the session */
+/* Traffic source: read UTMs on arrival, normalise to friendly names, remember for the session */
 var BPC_SOURCE=(function(){
+  function label(s,m,c){
+    s=(s||'').toLowerCase();m=(m||'').toLowerCase();c=(c||'').toLowerCase();
+    var ig=/^(ig|instagram)$/.test(s);
+    var fb=/^(fb|facebook|meta)$/.test(s);
+    var net=ig?'instagram':fb?'facebook':s;
+    if(/link_in_bio|bio/.test(c)||/^bio$/.test(m))return net+' / bio';
+    if(/^(paid|ad|ads|cpc|ppc|retargeting)$/.test(m))return net+' / ad';
+    if(/^website$/.test(s))return 'website';
+    if(/^(social|organic)$/.test(m))return net+' / organic';
+    return m?net+' / '+m:net;
+  }
   try{
     var q=new URLSearchParams(location.search);
-    var s=q.get('utm_source'),m=q.get('utm_medium'),c=q.get('utm_campaign');
+    var s=q.get('utm_source');
     if(s){
-      var label=s+(m?' / '+m:'')+(c?' / '+c:'');
-      localStorage.setItem('bpc_source',label);
-      localStorage.setItem('bpc_landing_url',location.href);
-      return label;
+      var l=label(s,q.get('utm_medium'),q.get('utm_content')||q.get('utm_campaign'));
+      localStorage.setItem('bpc_source',l);
+      localStorage.setItem('bpc_landing_url',location.origin+location.pathname+location.search.replace(/[?&](fbclid|gclid|_aem|igsh|msclkid)=[^&]*/g,'').replace(/^&/,'?'));
+      return l;
     }
     var saved=localStorage.getItem('bpc_source');
     if(saved)return saved;
     var r=document.referrer||'';
-    if(/brainperformancecoaching\.com/.test(r)&&!/^https?:\/\/8d\./.test(r))return 'website';
+    if(/brainperformancecoaching\.com/.test(r)&&!/^https?:\/\/assessment\./.test(r))return 'website';
     if(/instagram\.com/.test(r))return 'instagram / organic';
     if(/facebook\.com/.test(r))return 'facebook / organic';
     if(!r)return 'direct';
     return 'referral: '+r;
   }catch(e){return 'unknown';}
 })();
-
 /* 8D Landing — behaviour */
 (function(){
 var DIMS = [{"id":1,"name":"Focus & Attention","color":"#E63946","summary":"Direct and sustain mental concentration on what matters most — under pressure, fatigue and distraction.","detail":"Determines whether you execute your skills with precision from start to finish — or whether external factors, mistakes, or mental noise pull you away from your task."},{"id":2,"name":"Emotional Regulation","color":"#9B7DD4","summary":"Manage emotional responses so they support — rather than sabotage — performance.","detail":"Stay composed when frustration rises, recover quickly after setbacks, and prevent anxiety or anger from hijacking your execution in critical moments."},{"id":3,"name":"Confidence","color":"#E8B84B","summary":"Trust your preparation and capability regardless of opponent, conditions or recent results.","detail":"The difference between competing freely and decisively, and letting doubt, past failures, or comparison limit what you'll attempt."},{"id":4,"name":"Self-Talk","color":"#4A90D9","summary":"Use internal dialogue intentionally to keep yourself focused, composed and moving forward.","detail":"A mind that reinforces execution and resilience under pressure — versus one that spirals into criticism, catastrophizing or chaos when things get difficult."},{"id":5,"name":"Motivation","color":"#F5864B","summary":"Inner drive and commitment, independent of results, validation or rewards.","detail":"Push consistently through adversity, setbacks and the daily grind — rather than letting effort depend on circumstances, mood or others' expectations."},{"id":6,"name":"Self-Awareness","color":"#6B46C1","summary":"Recognise your mental patterns, emotional triggers and performance tendencies accurately.","detail":"Identify exactly what's working or limiting you mentally — rather than performing on autopilot or only seeing the gap in hindsight."},{"id":7,"name":"State Management","color":"#9DC63D","summary":"Deliberately enter and maintain the optimal mental and physical state for performance.","detail":"Compete in the zone consistently — instead of leaving your activation, focus and readiness to feel random, reactive or outside your control."},{"id":8,"name":"Visualisation","color":"#3DB5C4","summary":"Mentally rehearse performance using vivid, multi-sensory imagery.","detail":"Prime movement patterns, simulate pressure scenarios and pre-program responses — turning mental practice into a competitive advantage."}];
@@ -110,6 +120,7 @@ function prog(){
 function goTo(n){
   var steps=document.querySelectorAll('.tf-step');
   if(n<1||n>TOTAL)return;
+  try{window.dispatchEvent(new CustomEvent('bpc:step',{detail:n}));}catch(e){}
   steps.forEach(function(s){s.classList.remove('is-active');});
   var to=document.querySelector('.tf-step[data-step="'+n+'"]');
   if(to){to.classList.add('is-active');var inp=to.querySelector('input');if(inp)setTimeout(function(){inp.focus();},60);}
@@ -154,10 +165,12 @@ async function submit(){
       body:JSON.stringify(Object.assign({_subject:'New 8D lead ('+BPC_SOURCE+') — '+(data.name||'')},data,{source:BPC_SOURCE,landing_url:(function(){try{return localStorage.getItem('bpc_landing_url')||location.href}catch(e){return location.href}})()}))
     });
   }catch(e){}
+  try{if(typeof gtag==='function')gtag('event','form_submit',{source:BPC_SOURCE});}catch(e){}
   try{
     localStorage.setItem('bpc_completed','true');
     localStorage.setItem('bpc_name',data.name||'');
   }catch(e){}
+  try{if(typeof gtag==='function')gtag('event','booking_redirect',{source:BPC_SOURCE});}catch(e){}
   window.location.href='https://cal.com/iaiacolella-braincoach/discovery?name='+encodeURIComponent(data.name||'')+'&email='+encodeURIComponent(data.email||'')+'&utm_source='+encodeURIComponent(BPC_SOURCE);
 }
 
@@ -190,4 +203,31 @@ prog();
     window.location.reload();
   });
 })();
+})();
+
+/* Funnel events → GA4 */
+function bpcTrack(name,params){
+  try{if(typeof gtag==='function')gtag('event',name,Object.assign({source:BPC_SOURCE},params||{}));}catch(e){}
+}
+(function(){
+  var seen={};
+  document.addEventListener('DOMContentLoaded',function(){
+    bpcTrack('landing_view');
+    var vid=document.querySelector('.lp-video iframe,.lp-video-frame iframe');
+    if(vid)vid.addEventListener('load',function(){bpcTrack('video_loaded');},{once:true});
+    var q=document.getElementById('qualify');
+    if(q&&'IntersectionObserver' in window){
+      new IntersectionObserver(function(es,o){
+        if(es[0].isIntersecting){bpcTrack('form_seen');o.disconnect();}
+      },{threshold:.4}).observe(q);
+    }
+    document.querySelectorAll('a[href*="cal.com"]').forEach(function(a){
+      a.addEventListener('click',function(){bpcTrack('booking_click',{placement:'link'});});
+    });
+  });
+  var _goTo=window.goTo;
+  window.addEventListener('bpc:step',function(e){
+    var n=e.detail;
+    if(!seen['s'+n]){seen['s'+n]=1;bpcTrack(n===1?'form_start':'form_step',{step:n});}
+  });
 })();
